@@ -1,13 +1,11 @@
 #include <send_steering.h>
 
-  send_steering servo_node;
 int main(int argc, char **argv) 
 {
   ros::init(argc, argv, "send_steering_node");
   ros::NodeHandle nh;
   ros::Rate loop(100);
-  
-  ros::spinOnce();  
+  send_steering servo_node; 
   servo_node.init();
   while(ros::ok())
   {
