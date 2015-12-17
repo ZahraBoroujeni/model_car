@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find openni2_launch)/launch/openni2.launch" />
+
+  <!--node name="openni2_node" pkg="openni2_launch" type="openni2_launch" /-->
+  <node name="ip_mapper_node" pkg="ip_mapping" type="ip_mapper_node" output="screen"/>
+</launch>
