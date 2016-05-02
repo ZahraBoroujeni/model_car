@@ -50,6 +50,7 @@ class online_IPM
     image_transport::Publisher pub_mapped_images_;
 
     IPMapper ipMapper;
+    std::string image_port_="/camera/rgb/image_rect_color";
 
   public:
 
@@ -58,7 +59,9 @@ class online_IPM
     // constructor
     online_IPM(ros::NodeHandle nh) : nh_(nh), priv_nh_("~"),ipMapper(640,480),it(nh_)
     {
-        read_images_= nh_.subscribe(nh_.resolveName("/camera/rgb/image_rect_color"), 1,&online_IPM::publish_remapper,this);
+       
+        priv_nh_.param<std::string>("image_port", image_port_, "/camera/rgb/image_rect_color");
+        read_images_= nh_.subscribe(nh_.resolveName(image_port_), 1,&online_IPM::publish_remapper,this);
         pub_mapped_images_= it.advertise("camera/ground_image", 1);
         //ipMapper.initialize(200,PROJECTED_IMAGE_HEIGTH, fu, fv, cx, cy, pitch);
     }
