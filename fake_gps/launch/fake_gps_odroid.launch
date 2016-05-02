@@ -32,7 +32,7 @@
   </node>
     <node pkg="tf" type="static_transform_publisher" name="ftsensor_FRAME" args="0 0 0 0 0 0 /world /Features_markers 500" />
 <param name="motor_serial_port" value="/dev/ttyUSB2" />
-        <param name="motor_baud_rate" value="9600" />
+        <param name="motor_baud_rate" value="115200" />
         <param name="servo_serial_port" value="/dev/ttyUSB3" />
         <param name="servo_baud_rate" value="115200" />
         <node pkg="manual_control" type="manual_control_node" name="manual_control" output="screen"/>
