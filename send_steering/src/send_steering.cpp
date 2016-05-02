@@ -1,9 +1,9 @@
 #include <send_steering.h>
 
-send_steering::send_steering() : servo_serial("/dev/ttyUSB0",115200, serial::Timeout::simpleTimeout(1000))
+send_steering::send_steering() : servo_serial("/dev/ttyUSB3",115200, serial::Timeout::simpleTimeout(1000))
 {
   result="";
-  priv_nh_.param<std::string>("servo_serial_port", serial_port_, "/dev/ttyUSB1");
+  priv_nh_.param<std::string>("servo_serial_port", serial_port_, "/dev/ttyUSB3");
   priv_nh_.param("servo_baud_rate", baud_rate_,115200);
   servo_serial.close();
   servo_serial.setPort(serial_port_);

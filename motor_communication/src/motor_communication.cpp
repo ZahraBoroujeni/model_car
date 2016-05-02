@@ -1,10 +1,10 @@
 #include <motor_communication.h>
 
-motor_communication::motor_communication() : my_serial("/dev/ttyUSB0",115200, serial::Timeout::simpleTimeout(1000))
+motor_communication::motor_communication() : my_serial("/dev/ttyUSB2",9600, serial::Timeout::simpleTimeout(1000))
 {
   result="";
   priv_nh_.param<std::string>("motor_serial_port", serial_port_, "/dev/ttyUSB2");
-  priv_nh_.param("motor_baud_rate", baud_rate_,115200);
+  priv_nh_.param("motor_baud_rate", baud_rate_,9600);
   my_serial.close();
   my_serial.setPort(serial_port_);
   my_serial.setBaudrate(baud_rate_);
@@ -63,8 +63,13 @@ void motor_communication::run(int speed)
       std::string speed_string = std::to_string(speed);;
 	  string test_string="v"+ speed_string +"\r\n";
 	  bytes_wrote =my_serial.write(test_string);
+<<<<<<< HEAD
+	//  result = my_serial.read(test_string.length()+2);
+	//  ROS_INFO("read speed:%s \n",result.c_str());
+=======
       //result = my_serial.read(test_string.length()+2);
       //ROS_INFO("read speed:%s \n",result.c_str());
+>>>>>>> 9b3c99fe51c15e952e5966d771c911e242b248e6
     }
     catch(const std::exception& e)
     {	 

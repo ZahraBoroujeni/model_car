@@ -27,7 +27,7 @@ class manual_control
 void manual_control::manualSpeedCallback(const std_msgs::Int16 speed_value)
 {
   int a;
-  a = speed_value.data;
+  a = speed_value.data*2;
   speed.run(a);
 }
 void manual_control::manualSteeringCallback(const std_msgs::Int16 steering_value)
