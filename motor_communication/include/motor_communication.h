@@ -47,5 +47,7 @@ class motor_communication
     void my_sleep(unsigned long milliseconds);
     void stop();
     void start();
+    int getSpeed();
+
 };
 

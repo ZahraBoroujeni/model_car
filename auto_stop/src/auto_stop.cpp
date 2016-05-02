@@ -4,28 +4,24 @@
 
 //parameters
 motor_communication *speedPtr;
-int direction = 0; 
+
 int angle_front;
 int angle_back;
 float break_distance;
 
 
-void autoEmergancyBreak(){
-ROS_INFO("stop");	
-speedPtr->run(0);
-	//speedPtr->stop(); //switch off motor?
-}
-
-void speedCallback(const std_msgs::Int16 speed)
+void autoEmergancyBreak()
 {
-	direction = speed.data; 
+	
+	speedPtr->run(0);
+	//speedPtr->stop(); //switch off motor?
 }
 
 void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 {
     int count = scan->scan_time / scan->time_increment;
-
-direction=-300;
+	int direction = speedPtr->getSpeed(); 
+    ROS_INFO("speed %d",direction);	
 	if(direction < 0){	//backw.
 		for(int i = 0; i < (angle_back/2)+1; i++){
 			if (scan->ranges[i] <= break_distance){
@@ -57,18 +53,18 @@ int main(int argc, char **argv)
     ros::init(argc, argv, "auto_stop_node");
     ros::NodeHandle n;
 
-	n.param<int>("angle_front", angle_front, 30);
-	n.param<int>("angle_back", angle_back, 30);
+	n.param<int>("angle_front", angle_front, 40);
+	n.param<int>("angle_back", angle_back, 40);
 	n.param<float>("break_distance", break_distance, 0.45);
 
 	motor_communication speed;
 	speedPtr = &speed;
     ros::Subscriber sub = n.subscribe<sensor_msgs::LaserScan>("/scan", 1000, scanCallback);
-	ros::Subscriber speedSub = n.subscribe<std_msgs::Int16>("/manual_control/speed",1,speedCallback);
+	
+	//ros::Subscriber speedSub = n.subscribe<std_msgs::Int16>("/manual_control/speed",1,speedCallback); doesn't work
 	while(ros::ok())
 	{
 		ros::spin();
 	}
     return 0;
 }
-
