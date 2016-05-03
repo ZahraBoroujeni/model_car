@@ -1,67 +1,82 @@
 #include "ros/ros.h"
 #include "sensor_msgs/LaserScan.h"
-#include <motor_communication.h>
+#include <std_msgs/Int16.h>
+#include <geometry_msgs/Twist.h>
 
 //parameters
-motor_communication *speedPtr;
+#include <ros/ros.h>
 
-int angle_front;
-int angle_back;
-float break_distance;
-
-
-void autoEmergancyBreak()
+class auto_stop
 {
-	
-	speedPtr->run(0);
-	//speedPtr->stop(); //switch off motor?
-}
+public:
+	auto_stop()
+	{
+		n_.param<int>("angle_front", angle_front, 40);
+		n_.param<int>("angle_back", angle_back, 40);
+		n_.param<float>("break_distance", break_distance, 0.45);
+		pubEmergencyStop_=n_.advertise<std_msgs::Int16>(n_.resolveName("manual_control/speed"), 1);
+		subScan_ = n_.subscribe("/scan", 1, &auto_stop::scanCallback,this);
+		subTwist_ = n_.subscribe("/motor_control/twist",1,&auto_stop::speedCallback,this); 
+	}
+	~auto_stop(){}
 
-void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
-{
-    int count = scan->scan_time / scan->time_increment;
-	int direction = speedPtr->getSpeed(); 
-    ROS_INFO("speed %d",direction);	
-	if(direction < 0){	//backw.
-		for(int i = 0; i < (angle_back/2)+1; i++){
-			if (scan->ranges[i] <= break_distance){
-				autoEmergancyBreak();
-				//ROS_INFO("Obstacle");
-				return;
-		    }
+    void speedCallback(const geometry_msgs::Twist& twist)
+	{
+		direction=twist.linear.x;
+	}
+
+	void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
+	{
+	    int count = scan->scan_time / scan->time_increment;
+	    std_msgs::Int16 speed;
+	    speed.data=0;
+	    ROS_INFO("speed %d",direction);	
+		if(direction < 0){	//backw.
+			for(int i = 0; i < (angle_back/2)+1; i++){
+				if (scan->ranges[i] <= break_distance){
+				
+					pubEmergencyStop_.publish(speed);
+					//ROS_INFO("Obstacle");
+					return;
+			    }
+			}
+			for(int k = (360-(angle_back/2)); k < count; k++){
+				if (scan->ranges[k] <= break_distance){
+					pubEmergencyStop_.publish(speed);
+					return;
+			    }
+			}
 		}
-		for(int k = (360-(angle_back/2)); k < count; k++){
-			if (scan->ranges[k] <= break_distance){
-				autoEmergancyBreak();
-				return;
-		    }
+
+		if(direction > 0){ //forw.
+			for(int j = (180-(angle_front/2)); j < (180+(angle_front/2))+1; j++){
+				if (scan->ranges[j] <= break_distance){
+					pubEmergencyStop_.publish(speed);
+					return;
+			    }
+			}
 		}
 	}
 
-	if(direction > 0){ //forw.
-		for(int j = (180-(angle_front/2)); j < (180+(angle_front/2))+1; j++){
-			if (scan->ranges[j] <= break_distance){
-				autoEmergancyBreak();
-				return;
-		    }
-		}
-	}
-}
+	private:
+	  	int angle_front;
+		int angle_back;
+		float break_distance;
+		int direction;
+	  	ros::NodeHandle n_; 
+	  	ros::Publisher pubEmergencyStop_;
+	  	ros::Subscriber subScan_;
+	  	ros::Subscriber subTwist_;
+
+};//End of class auto_stop
+
+
 
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "auto_stop_node");
-    ros::NodeHandle n;
+    auto_stop autoStopObject;
 
-	n.param<int>("angle_front", angle_front, 40);
-	n.param<int>("angle_back", angle_back, 40);
-	n.param<float>("break_distance", break_distance, 0.45);
-
-	motor_communication speed;
-	speedPtr = &speed;
-    ros::Subscriber sub = n.subscribe<sensor_msgs::LaserScan>("/scan", 1000, scanCallback);
-	
-	//ros::Subscriber speedSub = n.subscribe<std_msgs::Int16>("/manual_control/speed",1,speedCallback); doesn't work
 	while(ros::ok())
 	{
 		ros::spin();

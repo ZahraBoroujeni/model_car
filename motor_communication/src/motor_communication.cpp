@@ -85,15 +85,18 @@ void motor_communication::stop()
 		ROS_ERROR("could not find serial port");
 	}
 }
-int motor_communication::getSpeed()
+double motor_communication::getSpeed()
 {
 	try
 	{
 		bytes_wrote = my_serial.write("gn\r\n");
 		result = my_serial.read(7); // -12.000 to 12.000 rpm inital config.
-		ROS_INFO("speed:%s \n",result.c_str());
-		return std::stoi (result, nullptr); //string to int
-		//return std::stoi (result, nullptr, 10);
+		//ROS_INFO("speed:%s \n",result.c_str());
+    std::stringstream ss(result);
+    double velocity;
+    ss >> velocity; //string to double
+		return velocity; 
+		//return =atof(str_quan.c_str());
 	}
 	catch(const std::exception& e)
 	{  

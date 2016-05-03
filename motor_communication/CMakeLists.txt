@@ -77,6 +77,11 @@ add_library(${PROJECT_NAME} src/motor_communication.cpp)
 add_executable(motor_communication_node src/motor_communication_node.cpp)
 add_dependencies(motor_communication_node ${PROJECT_NAME})
 target_link_libraries(motor_communication_node ${PROJECT_NAME} ${catkin_LIBRARIES})
+
+
+add_executable(motor_control_node src/motor_control_node.cpp)
+add_dependencies(motor_control_node ${PROJECT_NAME})
+target_link_libraries(motor_control_node ${PROJECT_NAME} ${catkin_LIBRARIES})
  
 #############
 ## Install ##
@@ -94,7 +99,7 @@ target_link_libraries(motor_communication_node ${PROJECT_NAME} ${catkin_LIBRARIE
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS  motor_communication_node
+install(TARGETS  motor_communication_node motor_control_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

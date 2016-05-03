@@ -26,8 +26,8 @@ class motor_communication
   private:
     //! Node handle in the private namespace
     ros::NodeHandle priv_nh_;
-    std::string serial_port_="/dev/ttySAC2";
-    int baud_rate_=115200;
+    std::string serial_port_;//="/dev/ttySAC2";
+    int baud_rate_;//=115200;
     std::string result;
     size_t bytes_wrote;
     
@@ -47,7 +47,7 @@ class motor_communication
     void my_sleep(unsigned long milliseconds);
     void stop();
     void start();
-    int getSpeed();
+    double getSpeed();
 
 };
 

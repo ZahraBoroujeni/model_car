@@ -1,8 +1,15 @@
 <launch>
-	<param name="motor_serial_port" value="/dev/ttyUSB2" />
-  	<param name="motor_baud_rate" value="115200" />
   	<param name="servo_serial_port" value="/dev/ttyUSB3" />
   	<param name="servo_baud_rate" value="115200" />
+    
+    <node pkg="motor_communication" type="motor_control_node" name="motor_control_node" output="screen">
+        <param name="motor_serial_port" value="/dev/ttyUSB2" />
+        <param name="motor_baud_rate" value="9600" />
+        <remap from="motor_control/speed" to="manual_control/speed"/>
+        <remap from="motor_control/stop_start" to="manual_control/stop_start"/>   
+    </node> 
+
+    
 	<node pkg="manual_control" type="manual_control_node" name="manual_control" output="screen"/>	
 <arg name="realsense_camera_type" default="Intel(R) RealSense(TM) 3D Camer" />
     
