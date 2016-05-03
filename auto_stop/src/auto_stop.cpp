@@ -28,12 +28,15 @@ public:
 	void scanCallback(const sensor_msgs::LaserScan::ConstPtr& scan)
 	{
 	    int count = scan->scan_time / scan->time_increment;
+	    float  break_distance_=break_distance;
+	    if (abs(direction)>500)
+	    	break_distance_=(abs(direction)/500)*break_distance;
 	    std_msgs::Int16 speed;
 	    speed.data=0;
-	    ROS_INFO("speed %d",direction);	
+	    //ROS_INFO("speed %f",break_distance_);	
 		if(direction < 0){	//backw.
 			for(int i = 0; i < (angle_back/2)+1; i++){
-				if (scan->ranges[i] <= break_distance){
+				if (scan->ranges[i] <= break_distance_){
 				
 					pubEmergencyStop_.publish(speed);
 					//ROS_INFO("Obstacle");
@@ -41,7 +44,7 @@ public:
 			    }
 			}
 			for(int k = (360-(angle_back/2)); k < count; k++){
-				if (scan->ranges[k] <= break_distance){
+				if (scan->ranges[k] <= break_distance_){
 					pubEmergencyStop_.publish(speed);
 					return;
 			    }
@@ -50,7 +53,7 @@ public:
 
 		if(direction > 0){ //forw.
 			for(int j = (180-(angle_front/2)); j < (180+(angle_front/2))+1; j++){
-				if (scan->ranges[j] <= break_distance){
+				if (scan->ranges[j] <= break_distance_){
 					pubEmergencyStop_.publish(speed);
 					return;
 			    }

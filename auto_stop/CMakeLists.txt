@@ -9,12 +9,12 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
   sensor_msgs
-  motor_communication
+  geometry_msgs
 )
 
 catkin_package(
 	LIBRARIES ${PROJECT_NAME}
-    CATKIN_DEPENDS std_msgs sensor_msgs motor_communication
+    CATKIN_DEPENDS std_msgs sensor_msgs geometry_msgs
 )
 
 include_directories(
