@@ -1,17 +1,18 @@
 # model_car
 control a model_car using ROS indigo 
 # packages
-<li> motor_communication </li>
-<li> send_steering </li>
-<li> auto_stop </li>
+<li> motor_communication /dev/ttyUSB2 </li> 
+<li> send_steering /dev/ttyUSB3 </li>
+<li> auto_stop /dev/ttyUSB2 </li>
 <li> manual_control </li>
 <li> realsense_camera </li>
 <li> cmvision </li>
 <li> ip_mapping </li>
 <li> line_detection </li>
-<li> rplidar_ros </li>
+<li> rplidar_ros /dev/ttyUSB0 </li>
 <li> serial </li>
 <li> usb_cam </li>
+<li> heading /dev/ttyUSB3 </li>
   
 
 ## cross compile realsense_camera

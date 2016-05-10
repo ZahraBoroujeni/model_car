@@ -1,9 +1,9 @@
-#include <motor_communication.h>
+#include <motor_communication/motor_communication.h>
 
-motor_communication::motor_communication() : my_serial("/dev/ttyUSB2",9600, serial::Timeout::simpleTimeout(1000))
+motor_communication::motor_communication(): priv_nh_("~"), my_serial("/dev/ttyUSB1",9600, serial::Timeout::simpleTimeout(1000))
 {
   result="";
-  priv_nh_.param<std::string>("motor_serial_port", serial_port_, "/dev/ttyUSB2");
+  priv_nh_.param<std::string>("motor_serial_port", serial_port_, "/dev/ttyUSB1");
   priv_nh_.param("motor_baud_rate", baud_rate_,9600);
   my_serial.close();
   my_serial.setPort(serial_port_);
@@ -29,9 +29,9 @@ void motor_communication::init()
       cout << "Is the serial port open?";
       //cout << my_serial.getBaudrate() << endl;
 	  if(my_serial.isOpen())
-	    cout << " Yes." << endl;
+	    ROS_INFO(" Yes.");
 	  else
-	    cout << " No." << endl;
+	    ROS_ERROR(" No.");
 
 	  bytes_wrote =my_serial.write("en\r\n");
 	  result = my_serial.read(4+2);

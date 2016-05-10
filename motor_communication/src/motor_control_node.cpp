@@ -1,4 +1,4 @@
-#include <motor_communication.h>
+#include <motor_communication/motor_communication.h>
 #include <geometry_msgs/Twist.h>
 
 class motor_control
@@ -11,7 +11,7 @@ class motor_control
     ros::Publisher pub_velocity_;
 
   public:
-    motor_control()
+    motor_control(ros::NodeHandle nh) : nh_(nh)
     {
       sub_speed_ = nh_.subscribe( "motor_control/speed", 1, &motor_control::motorSpeedCallback,this);
       sub_stop_ = nh_.subscribe( "motor_control/stop_start", 1,  &motor_control::motorStopStartCallback,this);
@@ -58,12 +58,16 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "motor_communication_node");
   ros::NodeHandle nh;
-  motor_control MC1;
+  motor_control MC1(nh);
+  ros::Rate loop_rate(5000);
    while(ros::ok())
   {
-    ros::spinOnce();
     MC1.publishMotorTwist();
-    
+    ros::spinOnce();
+    loop_rate.sleep();
   }
+  std_msgs::Int16 stop_value;
+  stop_value.data=1;
+  MC1.motorStopStartCallback(stop_value);
   return 0;
 }

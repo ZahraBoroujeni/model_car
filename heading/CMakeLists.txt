@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 2.8.3)
 set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
-project(motor_communication)
+project(heading)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS geometry_msgs roscpp serial std_msgs  )
+find_package(catkin REQUIRED roscpp serial std_msgs)
+find_package(serial REQUIRED) 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-
  
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -48,10 +48,10 @@ find_package(catkin REQUIRED COMPONENTS geometry_msgs roscpp serial std_msgs  )
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
- INCLUDE_DIRS include
+ INCLUDE_DIRS include/
  LIBRARIES ${PROJECT_NAME}
- CATKIN_DEPENDS geometry_msgs serial std_msgs 
-#  DEPENDS 
+ CATKIN_DEPENDS serial std_msgs
+#  DEPENDS system_lib
 )
 
 ###########
@@ -62,25 +62,23 @@ catkin_package(
 ## Your package locations should be listed before other locations
 # include_directories(include)
 ## Include headers
-include_directories(include
+include_directories(
+  include/
   ${catkin_INCLUDE_DIRS}
 )
 
 
 ## Declare a cpp library
-add_library(${PROJECT_NAME} src/motor_communication.cpp)
+add_library(${PROJECT_NAME} src/heading.cpp)
 
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 ## Declare a cpp executable
 # add_executable(object_node src/object_node.cpp)
-add_executable(motor_communication_node src/motor_communication_node.cpp)
-add_dependencies(motor_communication_node ${PROJECT_NAME})
-target_link_libraries(motor_communication_node ${PROJECT_NAME} ${catkin_LIBRARIES})
+add_executable(heading_node src/heading_node.cpp)
+#add_dependencies(heading_node ${PROJECT_NAME})
+target_link_libraries(heading_node ${PROJECT_NAME} ${catkin_LIBRARIES})
 
-
-add_executable(motor_control_node src/motor_control_node.cpp)
-add_dependencies(motor_control_node ${PROJECT_NAME})
-target_link_libraries(motor_control_node ${PROJECT_NAME} ${catkin_LIBRARIES})
  
 #############
 ## Install ##
@@ -98,7 +96,7 @@ target_link_libraries(motor_control_node ${PROJECT_NAME} ${catkin_LIBRARIES})
 
 
 ## Mark executables and/or libraries for installation
-install(TARGETS  ${PROJECT_NAME} motor_communication_node motor_control_node
+install(TARGETS  heading_node
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}

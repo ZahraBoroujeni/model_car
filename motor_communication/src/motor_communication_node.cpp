@@ -1,4 +1,4 @@
-#include <motor_communication.h>
+#include <motor_communication/motor_communication.h>
 
   
 int main(int argc, char **argv) 

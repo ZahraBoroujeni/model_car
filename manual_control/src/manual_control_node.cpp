@@ -7,7 +7,7 @@ class manual_control
     ros::Subscriber sub_steering_;
 
   public:
-    manual_control()
+    manual_control(ros::NodeHandle nh) : nh_(nh)
     {
       sub_steering_ = nh_.subscribe( "manual_control/steering", 1,  &manual_control::manualSteeringCallback,this);
     }
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 {
   ros::init(argc, argv, "manual_control_node");
   ros::NodeHandle nh;
-  manual_control MC1;
+  manual_control MC1(nh);
    while(ros::ok())
   {
     ros::spinOnce();  

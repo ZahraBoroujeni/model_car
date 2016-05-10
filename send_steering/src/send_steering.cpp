@@ -1,6 +1,6 @@
 #include <send_steering.h>
 
-send_steering::send_steering() : servo_serial("/dev/ttyUSB3",115200, serial::Timeout::simpleTimeout(1000))
+send_steering::send_steering() : priv_nh_("~"), servo_serial("/dev/ttyUSB3",115200, serial::Timeout::simpleTimeout(1000))
 {
   result="";
   priv_nh_.param<std::string>("servo_serial_port", serial_port_, "/dev/ttyUSB3");
@@ -18,12 +18,12 @@ void send_steering::init()
 {
   	try
     {
-      cout << "Is the servo serial port open?";
+      ROS_INFO("Is the servo serial port %s open?",serial_port_.c_str());
       //cout << my_serial.getBaudrate() << endl;
   	  if(servo_serial.isOpen())
-  	    cout << " Yes." << endl;
-  	  else
-  	    cout << " No." << endl;
+        ROS_INFO(" Yes.");
+      else
+        ROS_ERROR(" No.");
   	  bytes_wrote =servo_serial.write("en\r");
     }
     catch(const std::exception& e)

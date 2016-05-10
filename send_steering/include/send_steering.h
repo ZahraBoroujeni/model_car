@@ -26,8 +26,8 @@ class send_steering
   private:
     //! Node handle in the private namespace
     ros::NodeHandle priv_nh_;
-    std::string serial_port_="/dev/ttySAC3";
-    int baud_rate_=115200;
+    std::string serial_port_;
+    int baud_rate_;
     std::string result;
     size_t bytes_wrote;
     serial::Serial servo_serial;
