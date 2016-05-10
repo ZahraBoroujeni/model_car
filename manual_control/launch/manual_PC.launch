@@ -1,7 +1,6 @@
 <launch>
-	<param name="motor_serial_port" value="/dev/ttyUSB0" />
-  	<param name="motor_baud_rate" value="115200" />
-  	<param name="servo_serial_port" value="/dev/ttyUSB1" />
-  	<param name="servo_baud_rate" value="115200" />
-	<node pkg="manual_control" type="manual_control_node" name="manual_control" output="screen"/>
+	<include file="$(find motor_communication)/launch/motor_odroid.launch"/>
+    <include file="$(find send_steering)/launch/servo_odroid.launch"/>
+    <include file="$(find auto_stop)/launch/auto_stop.launch"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
 </launch>

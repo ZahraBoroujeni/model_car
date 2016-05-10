@@ -18,17 +18,17 @@ void send_steering::init()
 {
   	try
     {
-      ROS_INFO("Is the servo serial port %s open?",serial_port_.c_str());
+      ROS_INFO("send_steering:: Is the servo serial port %s open?",serial_port_.c_str());
       //cout << my_serial.getBaudrate() << endl;
   	  if(servo_serial.isOpen())
-        ROS_INFO(" Yes.");
+        ROS_INFO("send_steering::Yes.");
       else
-        ROS_ERROR(" No.");
+        ROS_ERROR("send_steering::No.");
   	  bytes_wrote =servo_serial.write("en\r");
     }
     catch(const std::exception& e)
     {	 
-      ROS_ERROR("could not find serial port");
+      ROS_ERROR("send_steering::could not find serial port");
     }
 }
 void send_steering::start()
@@ -39,7 +39,7 @@ void send_steering::start()
     }
     catch(const std::exception& e)
     {  
-      ROS_ERROR("could not find serial port");
+      ROS_ERROR("send_steering::could not find serial port");
     }
 }
 void send_steering::run(int speed)
@@ -52,7 +52,7 @@ void send_steering::run(int speed)
     }
     catch(const std::exception& e)
     {	 
-      	ROS_ERROR("could not find serial port");
+      	ROS_ERROR("send_steering::could not find serial port");
     }
 }
 void send_steering::stop()
@@ -64,6 +64,6 @@ void send_steering::stop()
 	}
 	catch(const std::exception& e)
 	{
-		ROS_ERROR("could not find serial port");
+		ROS_ERROR("send_steering::could not find serial port");
 	}
 }

@@ -4,10 +4,9 @@ motor_communication::motor_communication(): priv_nh_("~"), my_serial("/dev/ttyUS
 {
   result="";
   priv_nh_.param<std::string>("motor_serial_port", serial_port_, "/dev/ttyUSB1");
-  priv_nh_.param("motor_baud_rate", baud_rate_,9600);
+  priv_nh_.param("motor_baud_rate", baud_rate_,115200);
   my_serial.close();
   my_serial.setPort(serial_port_);
-  my_serial.setBaudrate(baud_rate_);
   my_serial.open();
   //my_serial.setTimeout(1000);
   //my_serial.Timeout.simpleTimeout(1000)
@@ -26,21 +25,30 @@ void motor_communication::init()
 {
   	try
     {
-      cout << "Is the serial port open?";
+      ROS_INFO("motor_communication::Is the serial port %s open?",serial_port_.c_str());
       //cout << my_serial.getBaudrate() << endl;
 	  if(my_serial.isOpen())
-	    ROS_INFO(" Yes.");
+	    ROS_INFO("motor_communication::Yes.");
 	  else
-	    ROS_ERROR(" No.");
+	    ROS_ERROR("motor_communication::No.");
+
+    //SET BAUDRATE TO 115200
+    bytes_wrote =my_serial.write("BAUD 115200\r\n");
+    my_serial.close();
+    my_serial.setPort(serial_port_);
+    my_serial.setBaudrate(baud_rate_);
+    my_serial.open();
+    ROS_INFO("motor_communication::set Baudrate: %d",baud_rate_);
+
 
 	  bytes_wrote =my_serial.write("en\r\n");
 	  result = my_serial.read(4+2);
-	  ROS_INFO("start:%s \n",result.c_str());
+	  ROS_INFO("motor_communication:: start:%s \n",result.c_str());
 
     }
     catch(const std::exception& e)
     {	 
-      	ROS_ERROR("could not find serial port");
+      	ROS_ERROR("motor_communication::could not find serial port");
     }
 }
 void motor_communication::start()
@@ -49,11 +57,11 @@ void motor_communication::start()
     {
       bytes_wrote =my_serial.write("en\r\n");
       result = my_serial.read(4+2);
-      ROS_INFO("start:%s \n",result.c_str());
+      ROS_INFO("motor_communication::start:%s \n",result.c_str());
     }
     catch(const std::exception& e)
     {  
-        ROS_ERROR("could not find serial port");
+        ROS_ERROR("motor_communication::could not find serial port");
     }
 }
 void motor_communication::run(int speed)
@@ -68,7 +76,7 @@ void motor_communication::run(int speed)
     }
     catch(const std::exception& e)
     {	 
-      	ROS_ERROR("could not find serial port");
+      	ROS_ERROR("motor_communication::could not find serial port");
     }
 }
 void motor_communication::stop()
@@ -78,11 +86,11 @@ void motor_communication::stop()
 		//serial::Serial my_serial(serial_port_, baud_rate_, serial::Timeout::simpleTimeout(1000));
 		bytes_wrote =my_serial.write("di\r\n");
 		result = my_serial.read(4);
-		ROS_INFO("read di:%s \n",result.c_str());
+		ROS_INFO("motor_communication::read di:%s \n",result.c_str());
 	}
 	catch(const std::exception& e)
 	{
-		ROS_ERROR("could not find serial port");
+		ROS_ERROR("motor_communication::could not find serial port");
 	}
 }
 double motor_communication::getSpeed()
@@ -100,6 +108,6 @@ double motor_communication::getSpeed()
 	}
 	catch(const std::exception& e)
 	{  
-		ROS_ERROR("could not find serial port");
+		ROS_ERROR("motor_communication::could not find serial port");
 	}
 }

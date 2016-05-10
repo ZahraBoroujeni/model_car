@@ -20,9 +20,6 @@ class manual_control
 
 void manual_control::manualSteeringCallback(const std_msgs::Int16 steering_value)
 { 
-  int a;
-  a = steering_value.data;
-  ROS_INFO("hear!");
   steering.run(steering_value.data);
 }
 

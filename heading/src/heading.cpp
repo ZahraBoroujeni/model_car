@@ -21,16 +21,16 @@ void heading::init()
 {
     try
     {
-      ROS_INFO("Is the serial port open?");
+      ROS_INFO("heading::Is the serial port %s open?",serial_port_.c_str());
       //cout << my_serial.getBaudrate() << endl;
     if(my_serial.isOpen())
-      ROS_INFO(" Yes.");
+      ROS_INFO("heading:: Yes.");
     else
-      ROS_INFO(" No.");
+      ROS_INFO("heading:: No.");
     }
     catch(const std::exception& e)
     {  
-        ROS_ERROR("could not find serial port");
+        ROS_ERROR("heading:: could not find serial port");
     }
 }
 void heading::getHeading()
@@ -54,6 +54,6 @@ void heading::getHeading()
   }
   catch(const std::exception& e)
   {  
-    ROS_ERROR("could not find serial port");
+    ROS_ERROR("heading:: could not find serial port");
   }
 }

@@ -9,14 +9,14 @@
 class auto_stop
 {
 public:
-	auto_stop()
+	auto_stop(ros::NodeHandle nh)
 	{
 		n_.param<int>("angle_front", angle_front, 40);
 		n_.param<int>("angle_back", angle_back, 40);
 		n_.param<float>("break_distance", break_distance, 0.45);
-		pubEmergencyStop_=n_.advertise<std_msgs::Int16>(n_.resolveName("manual_control/speed"), 1);
-		subScan_ = n_.subscribe("/scan", 1, &auto_stop::scanCallback,this);
-		subTwist_ = n_.subscribe("/motor_control/twist",1,&auto_stop::speedCallback,this); 
+		pubEmergencyStop_=nh.advertise<std_msgs::Int16>(nh.resolveName("manual_control/speed"), 1);
+		subScan_ = n_.subscribe("scan", 1, &auto_stop::scanCallback,this);
+		subTwist_ = n_.subscribe("motor_control/twist",1,&auto_stop::speedCallback,this); 
 	}
 	~auto_stop(){}
 
@@ -78,7 +78,8 @@ public:
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "auto_stop_node");
-    auto_stop autoStopObject;
+    ros::NodeHandle nh; 
+    auto_stop autoStopObject(nh);
 
 	while(ros::ok())
 	{

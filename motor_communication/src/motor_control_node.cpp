@@ -59,7 +59,7 @@ int main(int argc, char **argv)
   ros::init(argc, argv, "motor_communication_node");
   ros::NodeHandle nh;
   motor_control MC1(nh);
-  ros::Rate loop_rate(5000);
+  ros::Rate loop_rate(30);
    while(ros::ok())
   {
     MC1.publishMotorTwist();

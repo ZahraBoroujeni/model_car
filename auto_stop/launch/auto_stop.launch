@@ -1,26 +1,7 @@
 <launch>
-	<node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
-	  <param name="serial_port"         type="string" value="/dev/ttyUSB0"/>  
-	  <param name="serial_baudrate"     type="int"    value="115200"/>
-	  <param name="frame_id"            type="string" value="laser"/>
-	  <param name="inverted"            type="bool"   value="false"/>
-	  <param name="angle_compensate"    type="bool"   value="true"/>
-  	</node>
-  	<param name="servo_serial_port" value="/dev/ttyUSB3" />
-  	<param name="servo_baud_rate" value="115200" />
-    
-    <node pkg="motor_communication" type="motor_control_node" name="motor_control_node" output="screen">
-        <param name="motor_serial_port" value="/dev/ttyUSB2" />
-        <param name="motor_baud_rate" value="9600" />
-        <remap from="motor_control/speed" to="manual_control/speed"/>
-        <remap from="motor_control/stop_start" to="manual_control/stop_start"/>   
-    </node> 
-	<node pkg="manual_control" type="manual_control_node" name="manual_control" output="screen"/>	
 	<node pkg="auto_stop" type="auto_stop_node" name="auto_stop" output="screen">	
 	  	<param name="angle_front"		type="int" 		value="35" />
 	  	<param name="angle_back"		type="int" 		value="35"/>		
 	  	<param name="break_distance"		type="double"		 	value="0.6"/>
 	</node>
-    <include file="$(find realsense_camera)/launch/realsense_camera.launch">
-    </include>
 </launch>
