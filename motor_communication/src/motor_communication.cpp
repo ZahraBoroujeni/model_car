@@ -7,6 +7,7 @@ motor_communication::motor_communication(): priv_nh_("~"), my_serial("/dev/ttyUS
   priv_nh_.param("motor_baud_rate", baud_rate_,115200);
   my_serial.close();
   my_serial.setPort(serial_port_);
+  my_serial.setBaudrate(baud_rate_);
   my_serial.open();
   //my_serial.setTimeout(1000);
   //my_serial.Timeout.simpleTimeout(1000)
@@ -33,12 +34,12 @@ void motor_communication::init()
 	    ROS_ERROR("motor_communication::No.");
 
     //SET BAUDRATE TO 115200
-    bytes_wrote =my_serial.write("BAUD 115200\r\n");
-    my_serial.close();
-    my_serial.setPort(serial_port_);
-    my_serial.setBaudrate(baud_rate_);
-    my_serial.open();
-    ROS_INFO("motor_communication::set Baudrate: %d",baud_rate_);
+    // bytes_wrote =my_serial.write("BAUD 115200\r\n");
+    // my_serial.close();
+    // my_serial.setPort(serial_port_);
+    // my_serial.setBaudrate(baud_rate_);
+    // my_serial.open();
+    // ROS_INFO("motor_communication::set Baudrate: %d",baud_rate_);
 
 
 	  bytes_wrote =my_serial.write("en\r\n");
