@@ -2,14 +2,6 @@
 use realsense camera in ROS
 
 
-## cross compile RealSense
-
-/opt/odroid-x2/sdk/usr/share/pcl-1.7/PCLConfig.cmake
-
-which apparently is influenced by VTK_DIR. Edit line 285 to 
-
-set(VTK_DIR "/opt/odroid-x2/sdk/usr/lib/vtk-5.8")
-
 
 ## New
 

@@ -4,4 +4,5 @@
     <include file="$(find realsense_camera)/launch/realsense_camera.launch"/>
     <include file="$(find auto_stop)/launch/auto_stop.launch"/>
     <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+    <include file="$(find light)/launch/light.launch"/>
 </launch>
