@@ -59,7 +59,7 @@ bool acompareCont(vector<Point> lContour, vector<Point> rContour)
     return contourArea(lContour) < contourArea(rContour);
 }
 
-bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& originalPoints)
+bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& originalPoints, int image_w_half)
 {
     
     //step 1: find the larger contours to filter out some noise (area > thresh)
@@ -75,7 +75,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
             largeContours.push_back(currCont);
         }
     }
-    
+
     
     //step 2: for each larger contour: find the center of mass and the lane direction to group them
     vector<Point2d> mass_centers;
@@ -94,7 +94,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
         double x_cent = currMoments.m10 / currMoments.m00;
         double y_cent = currMoments.m01 / currMoments.m00;
         Point2d mass_cent(x_cent,y_cent);
-        mass_centers.push_back(mass_cent);
+        mass_centers.push_back(mass_cent);    
     }
 
     //assert these vectors have same length:
@@ -209,6 +209,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
             currGrouping.push_back(currContour);
         }
         if(currGrouping.size() > 0)mergedContours.push_back(currGrouping);
+        
     }
 
 
@@ -218,10 +219,10 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
     vector<vector<vector<Point> > > multipleContours;
 
     for(int i = 0;i < (int)mergedContours.size();i++)
-    {
+    {        
         vector<vector<Point> > currContGroup = mergedContours.at(i);
-        if(currContGroup.size() == 1)singleContours.push_back(currContGroup.at(0));
-        else if(currContGroup.size() > 1)multipleContours.push_back(currContGroup);
+        if(currContGroup.size() == 1) singleContours.push_back(currContGroup.at(0));
+        else if(currContGroup.size() > 1) multipleContours.push_back(currContGroup);                
     }
 
     //in this situation there is actually a chance to apply the middle lane extraction, otherwise the old procedure is applied
@@ -269,7 +270,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
                     {
                         if(pointPolygonTest(currCont, Point(x,y), false) >= 0)
                         {
-                            temp_result.push_back(Point2d(x-100,y));
+                            temp_result.push_back(Point2d(x-image_w_half,y));
                         }
                     }
                 }
@@ -291,11 +292,10 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
                 {
                     if(pointPolygonTest(largestSingleContour, Point(x,y), false) >= 0)
                     {
-                        temp_result2.push_back(Point2d(x-100,y));
+                        temp_result2.push_back(Point2d(x-image_w_half,y));
                     }
                 }
             }
-
 
 
             if(validMid)
@@ -331,7 +331,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
                 {
                     if(pointPolygonTest(currContour, Point(x,y), false) >= 0)
                     {
-                        temp_result.push_back(Point2d(x-100,y));
+                        temp_result.push_back(Point2d(x-image_w_half,y));
                     }
                 }
             }
@@ -363,7 +363,7 @@ bool ContourModel::update(vector<vector<Point> > contours,vector<Point2d>& origi
                 //check if within the contour:
                 if(pointPolygonTest(currContour, originalPoints.at(k), false) >= 0)
                 {
-                    temp_result.push_back(Point2d(originalPoints.at(k).x-100, originalPoints.at(k).y));
+                    temp_result.push_back(Point2d(originalPoints.at(k).x-image_w_half, originalPoints.at(k).y));
                 }
             }
         }

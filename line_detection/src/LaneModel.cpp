@@ -26,8 +26,10 @@ THIS SOFTWARE IS PROVIDED BY AUDI AG AND CONTRIBUTORS “AS IS” AND ANY EXPRES
 
 #define USE_HISTORY_SIZE 2
 
-LaneModel::LaneModel(bool doReject)
+LaneModel::LaneModel(bool doReject, int image_w_half_, int lane_width_)
 {
+    image_w_half = image_w_half_;
+    laneWidth = lane_width_;
     initialize(doReject,false);
 }
 
@@ -51,7 +53,7 @@ void LaneModel::initialize(bool doReject,bool doTurnLeft)
 
     streetHistoryMutex = PTHREAD_MUTEX_INITIALIZER;
 
-    laneWidth = 45;
+    //laneWidth = 17;
 
     a_hist.clear();
     b_hist.clear();
@@ -1815,22 +1817,22 @@ void LaneModel::getDebugImage(Mat laneModelDrawing)
     //---------------------- DEBUG OUTPUT LANE MODEL---------------------------------//
     int carOffset = 50;
 
-    //draw the street history points
+    //draw the street history points - red line
     for(int i = 0;i < (int)streetHistory.size();i++)
     {
         Point2d currP = streetHistory.at(i);
-        currP.x += 100;
+        currP.x += image_w_half;
         currP.y += carOffset;
-        circle(laneModelDrawing,currP,1,Scalar(0,0,255),-1);
+        circle(laneModelDrawing,currP,1,Scalar(0,0,255),-1);        
     }
 
     //draw the parabola in section -50 to 50
     for(int y = -50;y < 50;y++)
-        //draw the parabola model
+        //draw the parabola model - blue line
     {
         double x1 = a*y*y + b*y+c;
         double x2 = a*(y+1)*(y+1) + b*(y+1)+c;
-        line(laneModelDrawing,Point(x1+100,y+50),Point(x2+100,y+51),Scalar(255,0,0),1);
+        line(laneModelDrawing,Point(x1+image_w_half,y+50),Point(x2+image_w_half,y+51),Scalar(255,0,0),1);
     }
 
     //draw the parabola model in section 50 to 160
@@ -1838,21 +1840,19 @@ void LaneModel::getDebugImage(Mat laneModelDrawing)
     {
         double x1g = a_group*y*y + b_group*y+c_group;
         double x2g = a_group*(y+1)*(y+1) + b_group*(y+1)+c_group;
-        line(laneModelDrawing,Point(x1g+100,y+50),Point(x2g+100,y+51),Scalar(0,255,0),1);
+        line(laneModelDrawing,Point(x1g+image_w_half,y+50),Point(x2g+image_w_half,y+51),Scalar(0,255,0),1);//not shown?
 
         //paint the fitted parabolas throgh the point sets:
         for(int j = 0;j < (int)fitted_a.size();j++)
         {
             double x1g = fitted_a.at(j)*y*y + fitted_b.at(j)*y+fitted_c.at(j);
             double x2g = fitted_a.at(j)*(y+1)*(y+1) + fitted_b.at(j)*(y+1)+fitted_c.at(j);
-            line(laneModelDrawing,Point(x1g+100,y+50),Point(x2g+100,y+51),Scalar(0,255,255),1);
+            line(laneModelDrawing,Point(x1g+image_w_half,y+50),Point(x2g+image_w_half,y+51),Scalar(0,255,255),1);//not shown?
         }
-
-
     }
 
     //draw the cars location
-    circle(laneModelDrawing,Point(100,50),3,Scalar(255,255,255),-1);
+    circle(laneModelDrawing,Point(image_w_half,50),3,Scalar(255,255,255),-1);
 
     //print model certainty
     std::ostringstream strs;
@@ -1860,9 +1860,9 @@ void LaneModel::getDebugImage(Mat laneModelDrawing)
     std::string str = strs.str();
     //putText(laneModelDrawing,str,Point(10,25),FONT_HERSHEY_COMPLEX_SMALL,0.8,Scalar(0,255,0),1,CV_AA);
 
-    //draw the current street estimate
+    //draw the current street estimate - green line
     for(int i = 0;i < (int)currentStreetEstimate.size();i++)
     {
-        circle(laneModelDrawing,currentStreetEstimate.at(i)+Point2d(100,50),1,Scalar(0,255,0),-1);
+        circle(laneModelDrawing,currentStreetEstimate.at(i)+Point2d(image_w_half,50),1,Scalar(0,255,0),-1);
     }
 }

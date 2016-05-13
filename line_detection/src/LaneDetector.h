@@ -26,6 +26,7 @@ THIS SOFTWARE IS PROVIDED BY AUDI AG AND CONTRIBUTORS “AS IS” AND ANY EXPRES
 
 #include <stdio.h>
 
+#include <ros/ros.h>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/opencv.hpp>
@@ -38,12 +39,20 @@ using namespace cv;
 
 class LaneDetector{
 public:
-    LaneDetector(int size,Point foe_p1,Point foe_p2);
+    LaneDetector(int size,Point foe_p1,Point foe_p2, int image_h_, int image_w_, int roi_top_w_,
+    	int roi_bottom_w_, int roi_horizontal_offset_, std::string path_2features, std::string path_30features);
     vector<Point2d> detect(Mat grayscaleImage, Mat sobeledImage, Mat groundplaneImage);
     
 private:
 	std::string classifier_file_path;
     int detectorSize;
+    int detectorSizeHalf;
+    int image_w;
+    int image_h;
+    int image_w_half;
+    int roi_top_w;
+    int roi_bottom_w;
+    int roi_horizontal_offset;
     Point foe_1;
     Point foe_2;
     StrongClassifier classifier_2features;

@@ -2,7 +2,7 @@
 
 
 Mat IPMapper::remap(Mat input)
-{
+{	
     Mat remappedImage(outputHeight,outputWidth,CV_8UC1,Scalar(0));
     
     for(int y = 0;y < outputHeight;y++)
@@ -24,27 +24,27 @@ Mat IPMapper::remap(Mat input)
 
 
 
-IPMapper::IPMapper(int ow,int oh)
+IPMapper::IPMapper(int ow, int oh, double _f_u, double _f_v, double _c_u, double _c_v, double deg, double _cam_h)
 {
     outputWidth  = ow;
     outputHeight = oh;
     
     //CAMERA PARAMETERS:
-    f_u = 524.692545;                           //focal lense values (mm)
-    f_v = 524.692545;
+    f_u = _f_u;//624.650635;//524.692545;                           //focal lense values (mm)
+    f_v = _f_v;//626.987244;//524.692545;
     
-    c_u = 319.5;                           //camera optical center
-    c_v = 239.5;
+    c_u = _c_u;//309.703230;//319.5;                           //camera optical center
+    c_v = _c_v;//231.473613;//239.5;
 
     double pi = 3.1415926;
-    double deg = 15;
+    //double deg = d//27;
     c_1 = cos(pi/180*deg);                             //cos(alpha : pitch angle),cos(beta : yaw angle)
     c_2 = 1.0;
     
     s_1 = sin(pi/180*deg);                             //sin(alpha : pitch angle),sin(beta : yaw angle)
     s_2 = 0.0;
     
-    cam_h = 22.5;
+    cam_h = _cam_h;//18;
     
     //init projection matrices
     T = (Mat_<double>(4,4) <<   -c_2/f_u, s_1*s_2/f_v, c_u*c_2/f_u-c_v*s_1*s_2/f_v-c_1*s_2, 0,
@@ -75,7 +75,7 @@ void IPMapper::initMappingMatrix(Mat_<cv::Point>* pointMatrix)
             vector<Point2d> result;
             invProjectPoints(&toMap, &result);
             
-            if(result.at(0).x >= 0 && result.at(0).x < 640 && result.at(0).y >= 0 && result.at(0).y < 480)
+            if(result.at(0).x >= 0 && result.at(0).x < outputWidth && result.at(0).y >= 0 && result.at(0).y < outputHeight)
             {
                 pointMatrix->at<Point>(y,x) = result.at(0);
             }

@@ -34,10 +34,13 @@ THIS SOFTWARE IS PROVIDED BY AUDI AG AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR
 
 #include <ros/ros.h>
 #include <sensor_msgs/Image.h>
+#include <std_msgs/Float32.h>
 #include <sensor_msgs/image_encodings.h>
 #include <cv_bridge/cv_bridge.h>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <image_transport/image_transport.h>
+#include <camera_info_manager/camera_info_manager.h>
 using namespace std;
 using namespace cv;
 
@@ -59,6 +62,10 @@ class cLaneDetection
         // subscribers
         ros::Subscriber read_images_;
 
+        // publishers
+        ros::Publisher publish_images;
+        ros::Publisher publish_parabola;;
+
         double m_LastValue;
 
         bool firstFrame;               /**< flag for the first frame*/
@@ -66,7 +73,7 @@ class cLaneDetection
 
 
         //define inner camera parameters (values will be gained from the opencv camera calibration program)
-        float f_u;
+        /*float f_u;
         float f_v;
 
         //camera optical center
@@ -90,8 +97,21 @@ class cLaneDetection
         //field of interest
         Point foe_p1;           //left top
         Point foe_p2;           //right bot
+*/
+        
+        int cam_w;
+        int cam_h;
+        int proj_y_start;
+        int proj_image_h;
+        int proj_image_w;
+        int proj_image_w_half;
+        int roi_top_w;
+        int roi_bottom_w;
+        int roi_horizontal_offset;
 
         
+
+
 
         LaneDetector detector;
         LaneModel    model;
@@ -109,7 +129,9 @@ class cLaneDetection
 
         void resetSystem();
 
-    	cLaneDetection(ros::NodeHandle nh);
+    	cLaneDetection(ros::NodeHandle nh, int cam_w_, int cam_h_, int proj_y_start_,
+            int proj_image_h_, int proj_image_w_, int roi_top_w_, int roi_bottom_w_, int roi_horizontal_offset_,
+            int detector_size_, int lane_width, std::string path_2features, std::string path_30features);
     	virtual ~cLaneDetection();
         int Init();
 
@@ -118,6 +140,7 @@ class cLaneDetection
 
     	*/
         void ProcessInput(const sensor_msgs::Image::ConstPtr& msg);
+        void pubRealSenseRGBImageMsg(cv::Mat& rgb_mat);
 };
 
 #endif 

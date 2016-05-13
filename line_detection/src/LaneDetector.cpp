@@ -24,14 +24,23 @@ THIS SOFTWARE IS PROVIDED BY AUDI AG AND CONTRIBUTORS “AS IS” AND ANY EXPRES
 #include "LaneDetector.h"
 #include <ros/package.h>
 
-#define PATH_2FEATURES "/home/zargol/catkin_ws/src/Autos/line_detection/src/strongClassifiers/classifier_2features.txt"
-#define PATH_30FEATURES "/home/zargol/catkin_ws/src/Autos/line_detection/src/strongClassifiers/classifier_30features.txt"
+//#define PATH_2FEATURES "/home/vena/Dropbox/lane_detection/catkin_ws/src/line_detection/src/strongClassifiers/classifier_2features.txt"
+//#define PATH_30FEATURES "/home/vena/Dropbox/lane_detection/catkin_ws/src/line_detection/src/strongClassifiers/classifier_30features.txt"
 
-LaneDetector::LaneDetector(int size,Point p1,Point p2) : classifier_2features(PATH_2FEATURES,0.5),classifier_30features(PATH_30FEATURES,0.5)
+
+LaneDetector::LaneDetector(int size,Point p1,Point p2, int image_h_, int image_w_, int roi_top_w_, int roi_bottom_w_, int roi_horizontal_offset_,
+    std::string path_2features, std::string path_30features) : classifier_2features(path_2features,0.5),classifier_30features(path_30features,0.5)
 {
     detectorSize = size;
+    detectorSizeHalf = size/2;
     foe_1 = p1;
     foe_2 = p2;
+    image_w = image_w_;
+    image_h = image_h_;
+    image_w_half = image_w/2;
+    roi_top_w = roi_top_w_;
+    roi_bottom_w = roi_bottom_w_;
+    roi_horizontal_offset = roi_horizontal_offset_;
 }
 
 vector<Point2d> LaneDetector::detect(Mat grayscaleImage,Mat sobeledImage,Mat groundplaneImage)
@@ -40,6 +49,7 @@ vector<Point2d> LaneDetector::detect(Mat grayscaleImage,Mat sobeledImage,Mat gro
     
     int totalDetectors = 0;
     int detectorsEval  = 0;
+    
 
     //sobel the input image
     /*Mat sobeledImage;
@@ -56,25 +66,27 @@ vector<Point2d> LaneDetector::detect(Mat grayscaleImage,Mat sobeledImage,Mat gro
     addWeighted(abs_grad_x,0.5,abs_grad_y,0.5,0,sobeledImage);*/
 
     vector<Point> checkContour;
-    checkContour.push_back(Point(4,grayscaleImage.rows-1));
-    checkContour.push_back(Point(195,grayscaleImage.rows-1));
-    checkContour.push_back(Point(126,50));
-    checkContour.push_back(Point(74,50));
+    checkContour.push_back(Point(image_w_half-(roi_bottom_w/2)+roi_horizontal_offset,image_h-1));
+    checkContour.push_back(Point(image_w_half+(roi_bottom_w/2)+roi_horizontal_offset,image_h-1));
+    checkContour.push_back(Point(image_w_half+(roi_top_w/2)+roi_horizontal_offset,0));
+    checkContour.push_back(Point(image_w_half-(roi_top_w/2)+roi_horizontal_offset,0));
+
 
     for(int i = foe_1.y;i < foe_2.y-detectorSize;i+=6)
     {
         for(int j = foe_1.x;j < foe_2.x-detectorSize;j+=1)
         {
 
-            if(pointPolygonTest(checkContour, Point(j,i),false) < 0)
+            if(pointPolygonTest(checkContour, Point(j+detectorSizeHalf,i+detectorSizeHalf),false) < 0)
             {
                 continue;
             }
 
+
             totalDetectors++;
             
-            if(groundplaneImage.at<uchar>(i+8,j+8) == 0)continue;
-            if(sobeledImage.at<uchar>(i+8,j+8) < 100)continue;
+            if(groundplaneImage.at<uchar>(i+detectorSizeHalf,j+detectorSizeHalf) == 0)continue;
+            if(sobeledImage.at<uchar>(i+detectorSizeHalf,j+detectorSizeHalf) < 100)continue;
 
             Rect x(j,i,detectorSize,detectorSize);
             Mat detectorGray = grayscaleImage(x);
@@ -85,7 +97,7 @@ vector<Point2d> LaneDetector::detect(Mat grayscaleImage,Mat sobeledImage,Mat gro
             int classifyResult = classifier_2features.classifyImage(integralImage, rotatedIntegralImage);
 
             if(classifyResult == 0)continue;
-
+            
             classifyResult = classifier_30features.classifyImage(integralImage, rotatedIntegralImage);
 
             detectorsEval++;
@@ -93,9 +105,11 @@ vector<Point2d> LaneDetector::detect(Mat grayscaleImage,Mat sobeledImage,Mat gro
             if(classifyResult == 1)
             {
                 //imshow("CORRECT",detectorGray);
-                //waitKey(0);
+                //waitKey(1);
+
+                //cout << "Center of marking: " << j+detectorSizeHalf << "/" << i+detectorSizeHalf << endl;
                 
-                Point2d newPoint(j+8,i+8);
+                Point2d newPoint(j+detectorSizeHalf,i+detectorSizeHalf);
                 detectedMarkers.push_back(newPoint);
                 detectedMarkers.push_back(newPoint+Point2d(0,2));
                 detectedMarkers.push_back(newPoint+Point2d(0,-2));

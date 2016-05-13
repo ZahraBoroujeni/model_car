@@ -41,7 +41,7 @@ class LaneModel{
 public:
 
 
-    LaneModel(bool doReject);
+    LaneModel(bool doReject, int image_w_half_, int lane_width_);
 
     int getCarState(double* curvature,double* distanceRightLane,double* angle,bool* isCurve);
 
@@ -116,6 +116,8 @@ public:
 
 
     RNG rand;
+
+    int image_w_half;
 };
 
 #endif /* defined(__LaneDetection__LaneModel__) */

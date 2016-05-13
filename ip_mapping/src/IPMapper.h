@@ -16,7 +16,7 @@ class IPMapper{
     
 public:
     
-    IPMapper(int outputWidth,int outputHeight);
+    IPMapper(int outputWidth,int outputHeight, double f_u, double f_v, double c_u, double c_v, double deg, double cam_h);
     Mat remap(Mat input);
     //project points ground plane => image
     void invProjectPoints(vector<Point>* points,vector<Point2d>* result);
