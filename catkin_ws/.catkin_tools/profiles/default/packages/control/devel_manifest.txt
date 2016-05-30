@@ -1,0 +1,5 @@
+control
+/root/catkin_ws/odroid-devel/.private/control/share/control/cmake/controlConfig-version.cmake /root/catkin_ws/odroid-devel/share/control/cmake/controlConfig-version.cmake
+/root/catkin_ws/odroid-devel/.private/control/share/control/cmake/controlConfig.cmake /root/catkin_ws/odroid-devel/share/control/cmake/controlConfig.cmake
+/root/catkin_ws/odroid-devel/.private/control/lib/control/control_node /root/catkin_ws/odroid-devel/lib/control/control_node
+/root/catkin_ws/odroid-devel/.private/control/lib/pkgconfig/control.pc /root/catkin_ws/odroid-devel/lib/pkgconfig/control.pc

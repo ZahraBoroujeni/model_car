@@ -32,7 +32,7 @@
 <!-- RealSense -->
 
     <node pkg="nodelet" type="nodelet" name="camera_nodelet"
-        args="load realsense_camera/RealsenseNodelet $(arg manager)" respawn="true">
+        args="load realsense_camera/RealsenseNodelet $(arg manager)">
         <param name="serial_no"         type="str"  value="$(arg serial_no)" />
         <param name="mode"              type="str"  value="$(arg mode)" />
         <param name="enable_depth"      type="bool" value="$(arg enable_depth_ir)" />

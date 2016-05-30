@@ -1,0 +1,8 @@
+prefix=/root/catkin_ws/odroid-install
+
+Name: send_steering
+Description: Description of send_steering
+Version: 0.0.0
+Cflags: -I/root/catkin_ws/odroid-install/include
+Libs: -L/root/catkin_ws/odroid-install/lib -lsend_steering
+Requires: serial

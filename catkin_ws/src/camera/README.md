@@ -1,4 +1,4 @@
-#Intel&reg; RealSense&trade; Technology - ROS Integration
+#Intel&reg; RealSense&trade; Technology - ROS Integration 
 ###Configuration
 | Version          | Best Known           |
 |:---------------- |:---------------------|
@@ -79,27 +79,27 @@ Infrared2 camera
             Specify the serial_no to uniquely connect to a camera, especially if multiple cameras are detected by the nodelet.
             You may get the serial_no from the info stream by launching "realsense_r200_nodelet_standalone_preset.launch"
             one at a time for each camera.
-        mode (string, default: preset)
-            Specify the mode to start camera streams. Mode comprises of height, width and fps.
-            Preset mode enables default values whereas Manual mode enables the specified parameter values.
-        color_height (int, default: 480)
-            Specify the color camera height resolution.
-        color_width (int, default: 640)
-            Specify the color camera width resolution.
-        depth_height (int, default: 360)
-            Specify the depth camera height resolution.
-        depth_width (int, default: 480)
-            Specify the depth camera width resolution.
-        color_fps (int, default: 60)
-            Specify the color camera FPS
-        depth_fps (int, default: 60)
-            Specify the depth camera FPS
-        enable_color (bool, default: true)
-            Specify if to enable or not the color camera.
-        enable_pointcloud (bool, default: true)
-            Specify if to enable or not the point cloud camera.
-        enable_tf (bool, default: true)
-            Specify if to enable or not the transform frames.
+	    mode (string, default: preset)
+	        Specify the mode to start camera streams. Mode comprises of height, width and fps. 
+	        Preset mode enables default values whereas Manual mode enables the specified parameter values.
+	    color_height (int, default: 480)
+	        Specify the color camera height resolution.
+	    color_width (int, default: 640)
+	        Specify the color camera width resolution.
+	    depth_height (int, default: 360)
+	        Specify the depth camera height resolution.
+	    depth_width (int, default: 480)
+	        Specify the depth camera width resolution.
+	    color_fps (int, default: 60)
+	        Specify the color camera FPS
+	    depth_fps (int, default: 60)
+	        Specify the depth camera FPS
+	    enable_color (bool, default: true) 
+	        Specify if to enable or not the color camera.
+	    enable_pointcloud (bool, default: true) 
+	        Specify if to enable or not the point cloud camera.
+	    enable_tf (bool, default: true) 
+	        Specify if to enable or not the transform frames.
         base_frame_id (string, default: camera_link)
             Specify the base frame id of the camera.
         depth_frame_id (string, default: camera_depth_frame)
@@ -114,9 +114,9 @@ Infrared2 camera
             Specify the IR frame id of the camera.
         ir2_frame_id (string, default: camera_infrared2_frame)
             Specify the IR2 frame id of the camera.
-      camera (string, default: "R200")
-          Specify the camera name.
-    Camera parameters:
+	    camera (string, default: "R200") 
+	        Specify the camera name. 
+    Camera parameters: 
     Following are the parameters that can be set only statically in the R200 camera:
         r200_depth_units : [1, 2147483647]
         r200_depth_clamp_min : [0, 65535]
@@ -134,17 +134,17 @@ Infrared2 camera
 
 ####Services
     get_settings (camera/get_settings)
-
+    
 To get supported camera options with current value set. It returns string in options:value format where different options are seperated by semicolon.
 
 ####Dynamic Parameters
 
     Stream parameters:
-        enable_depth (bool, default: true)
+        enable_depth (bool, default: true) 
           Specify if to enable or not the depth and infrared camera.
           Note: Infrared streams will be enabled or disabled along with depth stream.
 
-    Camera parameters:
+    Camera parameters: 
     Following are the parameters that can be set dynamically as well as statically in the R200 camera.
         color_backlight_compensation
         color_brightness
@@ -222,10 +222,10 @@ For viewing supported camera settings with current values:
     $ rosservice call /camera/get_settings
 
 For running multiple cameras simultaneously:
-* Create ".launch" files similar to "realsense_r200_rgbd.launch" for each camera.
-    * Update the "camera" and "serial_no" arguments with unique values for each camera.
-    * You may choose to include (or not) the "processing.launch.xml" based on your requirement.
-* Launch the ".launch" files for each camera in separate terminals.
+* Create ".launch" files similar to "realsense_r200_rgbd.launch" for each camera.  
+    * Update the "camera" and "serial_no" arguments with unique values for each camera.  
+    * You may choose to include (or not) the "processing.launch.xml" based on your requirement.  
+* Launch the ".launch" files for each camera in separate terminals.  
 
 ###Unit Tests
 The Unit Tests can be executed using either of the methods:
@@ -233,7 +233,7 @@ The Unit Tests can be executed using either of the methods:
 Using rostest command with test files
 
     $ rostest realsense_camera <test_filename>
-    E.g. rostest realsense_camera realsense_r200_depth_only.test
+    E.g. rostest realsense_camera realsense_r200_depth_only.test 
 
 Using rosrun command
 
@@ -267,13 +267,12 @@ Refer to the function definitions in [realsense_camera_nodelet.h](src/realsense_
     * Depth stream:    Y16
     * Infrared stream: Y8
 
-* The camera does not provide hardware based depth registration/projector data.
-Hence the launch file "realsense_r200_rgbd.launch" will not generate data for the following topics:
-    * /camera/depth_registered/hw_registered/image_rect_raw
-    * /camera/depth_registered/points
-    * /camera/depth_registered/hw_registered/image_rect
-    * /camera/depth_registered/image
-    * /camera/depth/disparity
-    * /camera/depth_registered/disparity
-
-* The performance benchmark for multiple cameras launched at the same time has not been defined yet.
+* The camera does not provide hardware based depth registration/projector data. 
+Hence the launch file "realsense_r200_rgbd.launch" will not generate data for the following topics:  
+    * /camera/depth_registered/hw_registered/image_rect_raw  
+    * /camera/depth_registered/points  
+    * /camera/depth_registered/hw_registered/image_rect  
+    * /camera/depth_registered/image  
+    * /camera/depth/disparity  
+    * /camera/depth_registered/disparity  
+* The performance benchmark for multiple cameras launched at the same time has not been defined yet.  

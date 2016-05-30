@@ -1,0 +1,2 @@
+auto_stop:camera:cmvision:control:detect_roof_rectangles:fake_gps:heading:ip_mapping:light:line_detection:manual_control:motor_communication:odometry:rplidar_ros:send_steering:serial:usb_cam
+-DCATKIN_DEVEL_PREFIX=/root/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/root/catkin_ws/install -G Unix Makefiles
