@@ -32,7 +32,7 @@
   <arg name="depth_height"                    default="480" />
   <arg name="depth_width"                     default="640" />
   <!-- Processing Modules -->
-  <arg name="rgb_processing"                  default="false"/>
+  <arg name="rgb_processing"                  default="true"/>
   <arg name="ir_processing"                   default="true"/>
   <arg name="depth_processing"                default="true"/>
   <arg name="depth_registered_processing"     default="true"/>
@@ -58,7 +58,7 @@
       <arg name="debug"               value="$(arg debug)" />
       <arg name="num_worker_threads"  value="$(arg num_worker_threads)" />
     </include>
-    <remap from="depth/image_raw" to="app/camera/rgb/image_raw" />
+    <remap from="rgb/image_raw" to="app/camera/rgb/image_raw" />
 
     <!-- Load driver -->
     <include if="$(arg load_driver)"

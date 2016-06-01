@@ -44,3 +44,4 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}.
 export ROS_HOSTNAME=192.168.43.102
 export ROS_MASTER_URI=http://192.168.43.102:11311
 source /opt/ros/indigo/setup.bash
+source /root/catkin_ws/devel/setup.bash
