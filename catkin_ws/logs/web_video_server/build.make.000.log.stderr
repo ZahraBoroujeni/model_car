@@ -1,0 +1,14 @@
+make[2]: Warning: File `/opt/ros/indigo/include/XmlRpcDecl.h' has modification time 1e+08 s in the future
+c++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
+make[2]: *** [CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o] Error 4
+make[2]: *** Waiting for unfinished jobs....
+c++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
+make[2]: *** [CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o] Error 4
+make[1]: *** [CMakeFiles/web_video_server.dir/all] Error 2
+make: *** [all] Error 2

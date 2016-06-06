@@ -23,8 +23,8 @@
 
     <!-- "enable_depth_ir" will take the value of "enable_ir" only if "enable_ir" is true.
          Else "enable_depth_ir" will take the value of "enable_depth" -->
-    <arg name="enable_depth_ir"     value="$(arg ir_processing)"    if="$(arg ir_processing)" />
-    <arg name="enable_depth_ir"     value="$(arg depth_processing)" unless="$(arg depth_processing)" />
+    <!--arg name="enable_depth_ir"     value="$(arg ir_processing)"    if="$(arg ir_processing)" /-->
+    <arg name="enable_depth_ir"     value="$(arg depth_processing)"/> <!-- unless="$(arg depth_processing)" /-->
 
      <!-- "enable_pointcloud" is set to false by default because rgbd launch uses standard ROS packages
           to generate point clouds. -->          

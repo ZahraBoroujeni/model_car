@@ -7,6 +7,7 @@
 #include <cstring> // For memcpy
 #include <cmath>
 #include <algorithm>
+#include <iostream>
 
 //#include <tmmintrin.h> // For SSE3 intrinsics used in unpack_yuy2_sse
 inline uint8_t clamp_byte(int v) { return v < 0 ? 0 : v > 255 ? 255 : v; }
@@ -28,13 +29,14 @@ namespace rsimpl
         case RS_FORMAT_XYZ32F: return width * height * 12;
         case RS_FORMAT_YUYV: assert(width % 2 == 0); return width * height * 2;
         case RS_FORMAT_RGB8: return width * height * 3;
-        case RS_FORMAT_BGR8: return width * height * 3;
-        case RS_FORMAT_RGBA8: return width * height * 4;
-        case RS_FORMAT_BGRA8: return width * height * 4;
-        case RS_FORMAT_Y8: return width * height;
-        case RS_FORMAT_Y16: return width * height * 2;
+        //case RS_FORMAT_BGR8: return width * height * 3;
+        //case RS_FORMAT_RGBA8: return width * height * 4;
+        //case RS_FORMAT_BGRA8: return width * height * 4;
+        //case RS_FORMAT_Y8: return width * height;
+        //case RS_FORMAT_Y16: return width * height * 2;
         case RS_FORMAT_RAW10: assert(width % 4 == 0); return width * 5/4 * height;
-        default: assert(false); return 0;
+        default: std::cout << format.c_str() << std::endl;
+         assert(false); return 0;
         }    
     }
 
@@ -306,12 +308,7 @@ namespace rsimpl
 
     const native_pixel_format pf_rw10       = {'RW10', 1, 1, {{&copy_pixels<1>,                 {{RS_STREAM_COLOR,    RS_FORMAT_RAW10}}}}};
     const native_pixel_format pf_yuy2       = {'YUY2', 1, 2, {{&copy_pixels<2>,                 {{RS_STREAM_COLOR,    RS_FORMAT_YUYV }}},
-                                                              {&unpack_yuy2<RS_FORMAT_Y8   >,   {{RS_STREAM_COLOR,    RS_FORMAT_Y8   }}},
-                                                              {&unpack_yuy2<RS_FORMAT_Y16  >,   {{RS_STREAM_COLOR,    RS_FORMAT_Y16  }}},
-                                                              {&unpack_yuy2<RS_FORMAT_RGB8 >,   {{RS_STREAM_COLOR,    RS_FORMAT_RGB8 }}},
-                                                              {&unpack_yuy2<RS_FORMAT_RGBA8>,   {{RS_STREAM_COLOR,    RS_FORMAT_RGBA8}}},
-                                                              {&unpack_yuy2<RS_FORMAT_BGR8 >,   {{RS_STREAM_COLOR,    RS_FORMAT_BGR8 }}},
-                                                              {&unpack_yuy2<RS_FORMAT_BGRA8>,   {{RS_STREAM_COLOR,    RS_FORMAT_BGRA8}}}}};
+                                                              {&unpack_yuy2<RS_FORMAT_RGB8 >,   {{RS_STREAM_COLOR,    RS_FORMAT_RGB8 }}}}};
     const native_pixel_format pf_y8         = {'Y8  ', 1, 1, {{&copy_pixels<1>,                 {{RS_STREAM_INFRARED, RS_FORMAT_Y8   }}}}};
     const native_pixel_format pf_y16        = {'Y16 ', 1, 2, {{&unpack_y16_from_y16_10,         {{RS_STREAM_INFRARED, RS_FORMAT_Y16  }}}}};
     const native_pixel_format pf_y8i        = {'Y8I ', 1, 2, {{&unpack_y8_y8_from_y8i,          {{RS_STREAM_INFRARED, RS_FORMAT_Y8   }, {RS_STREAM_INFRARED2, RS_FORMAT_Y8}}}}};

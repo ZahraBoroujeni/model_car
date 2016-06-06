@@ -9,7 +9,7 @@
   <arg name="serial_no"       default="" />
 
   <!-- Use OpenNI's factory-calibrated depth->RGB registration? -->
-  <arg name="depth_registration" default="false" />
+  <arg name="depth_registration" default="true" />
 
   <arg name="depth_frame_id"  default="$(arg camera)_depth_optical_frame" />
   <arg name="rgb_frame_id"    default="$(arg camera)_rgb_optical_frame" />

@@ -538,6 +538,9 @@ actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
+//The directory containing a CMake configuration file for async_web_server_cpp.
+async_web_server_cpp_DIR:PATH=/opt/ros/indigo/share/async_web_server_cpp/cmake
+
 //Value Computed by CMake
 auto_stop_BINARY_DIR:STATIC=/root/catkin_ws/build/auto_stop
 
@@ -666,7 +669,7 @@ kalman_2d_LIB_DEPENDS:STATIC=
 kalman_3d_LIB_DEPENDS:STATIC=
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libcamera_info_manager.so
+lib:FILEPATH=/opt/ros/indigo/lib/libasync_web_server_cpp.so
 
 //Value Computed by CMake
 light_BINARY_DIR:STATIC=/root/catkin_ws/build/light
@@ -733,6 +736,12 @@ pcl_ros_DIR:PATH=/opt/ros/indigo/share/pcl_ros/cmake
 
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
+
+//Value Computed by CMake
+random_movement_BINARY_DIR:STATIC=/root/catkin_ws/build/random_movement
+
+//Value Computed by CMake
+random_movement_SOURCE_DIR:STATIC=/root/catkin_ws/src/random_movement
 
 //Value Computed by CMake
 realsense_camera_BINARY_DIR:STATIC=/root/catkin_ws/build/camera
@@ -850,6 +859,12 @@ usb_cam_LIB_DEPENDS:STATIC=general;avcodec;general;swscale;general;/opt/ros/indi
 
 //Value Computed by CMake
 usb_cam_SOURCE_DIR:STATIC=/root/catkin_ws/src/usb_cam
+
+//Value Computed by CMake
+web_video_server_BINARY_DIR:STATIC=/root/catkin_ws/build/web_video_server
+
+//Value Computed by CMake
+web_video_server_SOURCE_DIR:STATIC=/root/catkin_ws/src/web_video_server
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
@@ -990,7 +1005,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=20
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=22
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1284,10 +1299,6 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
-//Last used BOOST_INCLUDEDIR value.
-_BOOST_INCLUDEDIR_LAST:INTERNAL=/usr/include
-//Last used Boost_ADDITIONAL_VERSIONS value.
-_Boost_ADDITIONAL_VERSIONS_LAST:INTERNAL=1.47;1.47.0
 //Components requested for this build tree.
 _Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;mpi;serialization;system;thread
 //Last used Boost_INCLUDE_DIR value.
@@ -1300,6 +1311,8 @@ __pkg_config_checked_PC_EIGEN:INTERNAL=1
 __pkg_config_checked_PC_FLANN:INTERNAL=1
 __pkg_config_checked_PC_OPENNI:INTERNAL=1
 __pkg_config_checked_avcodec:INTERNAL=1
+__pkg_config_checked_avformat:INTERNAL=1
+__pkg_config_checked_avutil:INTERNAL=1
 __pkg_config_checked_swscale:INTERNAL=1
 avcodec_CFLAGS:INTERNAL=
 avcodec_CFLAGS_I:INTERNAL=
@@ -1335,6 +1348,74 @@ avcodec_libavcodec_INCLUDEDIR:INTERNAL=
 avcodec_libavcodec_LIBDIR:INTERNAL=
 avcodec_libavcodec_PREFIX:INTERNAL=
 avcodec_libavcodec_VERSION:INTERNAL=
+avformat_CFLAGS:INTERNAL=
+avformat_CFLAGS_I:INTERNAL=
+avformat_CFLAGS_OTHER:INTERNAL=
+avformat_FOUND:INTERNAL=1
+avformat_INCLUDEDIR:INTERNAL=/usr/include
+avformat_INCLUDE_DIRS:INTERNAL=
+avformat_LDFLAGS:INTERNAL=-lavformat
+avformat_LDFLAGS_OTHER:INTERNAL=
+avformat_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+avformat_LIBRARIES:INTERNAL=avformat
+avformat_LIBRARY_DIRS:INTERNAL=
+avformat_LIBS:INTERNAL=
+avformat_LIBS_L:INTERNAL=
+avformat_LIBS_OTHER:INTERNAL=
+avformat_LIBS_PATHS:INTERNAL=
+avformat_PREFIX:INTERNAL=/usr
+avformat_STATIC_CFLAGS:INTERNAL=
+avformat_STATIC_CFLAGS_I:INTERNAL=
+avformat_STATIC_CFLAGS_OTHER:INTERNAL=
+avformat_STATIC_INCLUDE_DIRS:INTERNAL=
+avformat_STATIC_LDFLAGS:INTERNAL=-pthread;-lavformat;-lavcodec;-ldl;-lXfixes;-lXext;-lX11;-lcdio_paranoia;-lcdio_cdda;-lcdio;-ljack;-lasound;-ldc1394;-lraw1394;-lgcrypt;-lxvidcore;-lx264;-lvpx;-lvorbisenc;-lvorbis;-ltheoraenc;-ltheoradec;-logg;-lspeex;-lschroedinger-1.0;-lrtmp;-lpulse-simple;-lpulse;-lopus;-lopenjpeg;-lmp3lame;-lgsm;-lfreetype;-lgnutls;-lva;-lbz2;-lz;-lavutil;-lm
+avformat_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread
+avformat_STATIC_LIBDIR:INTERNAL=
+avformat_STATIC_LIBRARIES:INTERNAL=avformat;avcodec;dl;Xfixes;Xext;X11;cdio_paranoia;cdio_cdda;cdio;jack;asound;dc1394;raw1394;gcrypt;xvidcore;x264;vpx;vorbisenc;vorbis;theoraenc;theoradec;ogg;speex;schroedinger-1.0;rtmp;pulse-simple;pulse;opus;openjpeg;mp3lame;gsm;freetype;gnutls;va;bz2;z;avutil;m
+avformat_STATIC_LIBRARY_DIRS:INTERNAL=
+avformat_STATIC_LIBS:INTERNAL=
+avformat_STATIC_LIBS_L:INTERNAL=
+avformat_STATIC_LIBS_OTHER:INTERNAL=
+avformat_STATIC_LIBS_PATHS:INTERNAL=
+avformat_VERSION:INTERNAL=54.20.4
+avformat_libavformat_INCLUDEDIR:INTERNAL=
+avformat_libavformat_LIBDIR:INTERNAL=
+avformat_libavformat_PREFIX:INTERNAL=
+avformat_libavformat_VERSION:INTERNAL=
+avutil_CFLAGS:INTERNAL=
+avutil_CFLAGS_I:INTERNAL=
+avutil_CFLAGS_OTHER:INTERNAL=
+avutil_FOUND:INTERNAL=1
+avutil_INCLUDEDIR:INTERNAL=/usr/include
+avutil_INCLUDE_DIRS:INTERNAL=
+avutil_LDFLAGS:INTERNAL=-lavutil
+avutil_LDFLAGS_OTHER:INTERNAL=
+avutil_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+avutil_LIBRARIES:INTERNAL=avutil
+avutil_LIBRARY_DIRS:INTERNAL=
+avutil_LIBS:INTERNAL=
+avutil_LIBS_L:INTERNAL=
+avutil_LIBS_OTHER:INTERNAL=
+avutil_LIBS_PATHS:INTERNAL=
+avutil_PREFIX:INTERNAL=/usr
+avutil_STATIC_CFLAGS:INTERNAL=
+avutil_STATIC_CFLAGS_I:INTERNAL=
+avutil_STATIC_CFLAGS_OTHER:INTERNAL=
+avutil_STATIC_INCLUDE_DIRS:INTERNAL=
+avutil_STATIC_LDFLAGS:INTERNAL=-lavutil;-lm
+avutil_STATIC_LDFLAGS_OTHER:INTERNAL=
+avutil_STATIC_LIBDIR:INTERNAL=
+avutil_STATIC_LIBRARIES:INTERNAL=avutil;m
+avutil_STATIC_LIBRARY_DIRS:INTERNAL=
+avutil_STATIC_LIBS:INTERNAL=
+avutil_STATIC_LIBS_L:INTERNAL=
+avutil_STATIC_LIBS_OTHER:INTERNAL=
+avutil_STATIC_LIBS_PATHS:INTERNAL=
+avutil_VERSION:INTERNAL=52.3.0
+avutil_libavutil_INCLUDEDIR:INTERNAL=
+avutil_libavutil_LIBDIR:INTERNAL=
+avutil_libavutil_PREFIX:INTERNAL=
+avutil_libavutil_VERSION:INTERNAL=
 swscale_CFLAGS:INTERNAL=
 swscale_CFLAGS_I:INTERNAL=
 swscale_CFLAGS_OTHER:INTERNAL=

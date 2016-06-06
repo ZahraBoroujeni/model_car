@@ -1,0 +1,35 @@
+-- Using CATKIN_DEVEL_PREFIX: /root/catkin_ws/odroid-devel/.private/web_video_server
+-- Using CMAKE_PREFIX_PATH: /root/catkin_ws/devel;/root/catkin_ws/odroid-devel;/opt/ros/indigo
+-- This workspace overlays: /root/catkin_ws/devel;/root/catkin_ws/odroid-devel;/opt/ros/indigo
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /root/catkin_ws/odroid-build/web_video_server/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.6.18
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   thread
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /root/catkin_ws/odroid-build/web_video_server
+[35m[1mScanning dependencies of target web_video_server
+make[2]: Warning: File `/opt/ros/indigo/include/XmlRpcDecl.h' has modification time 1e+08 s in the future
+[0m[ 14%] [ 28%] [ 42%] [ 57%] [32mBuilding CXX object CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o
+[0m[ 71%] [ 85%] [32mBuilding CXX object CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o
+[32mBuilding CXX object CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o
+[0m[0m[100%] [32mBuilding CXX object CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o
+[32mBuilding CXX object CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o
+[0m[0m[32mBuilding CXX object CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o
+[0m[32mBuilding CXX object CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o
+c++: internal compiler error: Killed (program cc1plus)
+Please submit a full bug report,
+with preprocessed source if appropriate.
+See <file:///usr/share/doc/gcc-4.8/README.Bugs> for instructions.
+make[2]: *** [CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o] Error 4
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/web_video_server.dir/all] Error 2
+make: *** [all] Error 2

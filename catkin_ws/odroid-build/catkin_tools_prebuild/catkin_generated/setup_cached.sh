@@ -8,10 +8,10 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/root/catkin_ws/odroid-devel/.private/catkin_tools_prebuild:$CMAKE_PREFIX_PATH"
-export CPATH="/opt/ros/indigo/include"
-export LD_LIBRARY_PATH="/opt/ros/indigo/lib:."
-export PKG_CONFIG_PATH="/opt/ros/indigo/lib/pkgconfig"
+export CPATH="/root/catkin_ws/devel/include:/opt/ros/indigo/include"
+export LD_LIBRARY_PATH="/root/catkin_ws/odroid-devel/.private/catkin_tools_prebuild/lib:/root/catkin_ws/devel/lib:/opt/ros/indigo/lib:."
+export PKG_CONFIG_PATH="/root/catkin_ws/odroid-devel/.private/catkin_tools_prebuild/lib/pkgconfig:/root/catkin_ws/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
 export PWD="/root/catkin_ws/odroid-build/catkin_tools_prebuild"
-export PYTHONPATH="/opt/ros/indigo/lib/python2.7/dist-packages"
+export PYTHONPATH="/root/catkin_ws/devel/lib/python2.7/dist-packages:/opt/ros/indigo/lib/python2.7/dist-packages"
 export ROSLISP_PACKAGE_DIRECTORIES="/root/catkin_ws/odroid-devel/.private/catkin_tools_prebuild/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/root/catkin_ws/odroid-build/catkin_tools_prebuild:/root/catkin_ws/src/camera:/opt/ros/indigo/share:/opt/ros/indigo/stacks"
+export ROS_PACKAGE_PATH="/root/catkin_ws/odroid-build/catkin_tools_prebuild:$ROS_PACKAGE_PATH"

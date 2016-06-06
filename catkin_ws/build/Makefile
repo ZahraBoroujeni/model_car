@@ -735,6 +735,19 @@ motor_control_node/fast:
 .PHONY : motor_control_node/fast
 
 #=============================================================================
+# Target rules for targets named random_movement_node
+
+# Build rule for target.
+random_movement_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 random_movement_node
+.PHONY : random_movement_node
+
+# fast build rule for target.
+random_movement_node/fast:
+	$(MAKE) -f random_movement/CMakeFiles/random_movement_node.dir/build.make random_movement/CMakeFiles/random_movement_node.dir/build
+.PHONY : random_movement_node/fast
+
+#=============================================================================
 # Target rules for targets named _cmvision_generate_messages_check_deps_Blob
 
 # Build rule for target.
@@ -1813,6 +1826,19 @@ usb_cam_node/fast:
 	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/build
 .PHONY : usb_cam_node/fast
 
+#=============================================================================
+# Target rules for targets named web_video_server
+
+# Build rule for target.
+web_video_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 web_video_server
+.PHONY : web_video_server
+
+# fast build rule for target.
+web_video_server/fast:
+	$(MAKE) -f web_video_server/CMakeFiles/web_video_server.dir/build.make web_video_server/CMakeFiles/web_video_server.dir/build
+.PHONY : web_video_server/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1871,6 +1897,7 @@ help:
 	@echo "... motor_communication"
 	@echo "... motor_communication_node"
 	@echo "... motor_control_node"
+	@echo "... random_movement_node"
 	@echo "... _cmvision_generate_messages_check_deps_Blob"
 	@echo "... _cmvision_generate_messages_check_deps_Blobs"
 	@echo "... cmvision"
@@ -1954,6 +1981,7 @@ help:
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... usb_cam"
 	@echo "... usb_cam_node"
+	@echo "... web_video_server"
 .PHONY : help
 
 
