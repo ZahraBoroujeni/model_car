@@ -72,32 +72,9 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o.provides: rplidar_ros/CMak
 
 rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o.provides.build: rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o
 
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o: rplidar_ros/CMakeFiles/rplidarNode.dir/flags.make
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o: /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
-	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o -c /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp
-
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i"
-	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp > CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i
-
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s"
-	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s
-
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires:
-.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
-
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
-	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides.build
-.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides
-
-rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides.build: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o
-
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o: rplidar_ros/CMakeFiles/rplidarNode.dir/flags.make
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o: /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/timer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o"
 	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o -c /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/timer.cpp
 
@@ -117,6 +94,29 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o.provides: 
 .PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o.provides
 
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o.provides.build: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o: rplidar_ros/CMakeFiles/rplidarNode.dir/flags.make
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o: /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o"
+	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o -c /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i"
+	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp > CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.i
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s"
+	cd /root/catkin_ws/build/rplidar_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/catkin_ws/src/rplidar_ros/sdk/src/arch/linux/net_serial.cpp -o CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.s
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires:
+.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
+	$(MAKE) -f rplidar_ros/CMakeFiles/rplidarNode.dir/build.make rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides.build
+.PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides
+
+rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.provides.build: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o
 
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o: rplidar_ros/CMakeFiles/rplidarNode.dir/flags.make
 rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o: /root/catkin_ws/src/rplidar_ros/sdk/src/hal/thread.cpp
@@ -167,8 +167,8 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o.provides.bui
 # Object files for target rplidarNode
 rplidarNode_OBJECTS = \
 "CMakeFiles/rplidarNode.dir/src/node.cpp.o" \
-"CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o" \
 "CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o" \
+"CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o" \
 "CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o" \
 "CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o"
 
@@ -176,8 +176,8 @@ rplidarNode_OBJECTS = \
 rplidarNode_EXTERNAL_OBJECTS =
 
 /root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o
-/root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o
 /root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o
+/root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o
 /root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o
 /root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o
 /root/catkin_ws/devel/lib/rplidar_ros/rplidarNode: rplidar_ros/CMakeFiles/rplidarNode.dir/build.make
@@ -207,8 +207,8 @@ rplidar_ros/CMakeFiles/rplidarNode.dir/build: /root/catkin_ws/devel/lib/rplidar_
 .PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/build
 
 rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/src/node.cpp.o.requires
-rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
 rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/timer.cpp.o.requires
+rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/arch/linux/net_serial.cpp.o.requires
 rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/hal/thread.cpp.o.requires
 rplidar_ros/CMakeFiles/rplidarNode.dir/requires: rplidar_ros/CMakeFiles/rplidarNode.dir/sdk/src/rplidar_driver.cpp.o.requires
 .PHONY : rplidar_ros/CMakeFiles/rplidarNode.dir/requires

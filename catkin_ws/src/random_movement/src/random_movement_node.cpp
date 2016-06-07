@@ -39,9 +39,6 @@ public:
 		if(direction < 0){	//backw.
 			for(int i = 0; i < (angle_back/2)+1; i++){
 				if (scan->ranges[i] <= break_distance_){
-					speed.data=1000;
-					pubSpeed_.publish(speed);
-					ros::Duration(0.25).sleep();
 					steering_angle.data=90-steering_angle_data;
 					speed.data=0;
 					pubSpeed_.publish(speed);
@@ -55,9 +52,6 @@ public:
 			}
 			for(int k = (360-(angle_back/2)); k < count; k++){
 				if (scan->ranges[k] <= break_distance_){
-					speed.data=1000;
-					pubSpeed_.publish(speed);
-					ros::Duration(0.25).sleep();
 					steering_angle.data=90-steering_angle_data;
 					speed.data=0;
 					pubSpeed_.publish(speed);
@@ -73,9 +67,6 @@ public:
 		if(direction > 0){ //forw.
 			for(int j = (180-(angle_front/2)); j < (180+(angle_front/2))+1; j++){
 				if (scan->ranges[j] <= break_distance_){
-					speed.data=-1000;
-					pubSpeed_.publish(speed);
-					ros::Duration(0.35).sleep();
 					steering_angle.data=90+steering_angle_data;
 					speed.data=0;
 					pubSpeed_.publish(speed);
