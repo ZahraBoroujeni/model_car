@@ -17,12 +17,14 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/root/catkin_ws/build/cv_bridge/src/CMakeFiles/cv_bridge.dir/DependInfo.cmake"
   "/root/catkin_ws/build/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/root/catkin_ws/devel/include"
+  "/root/catkin_ws/src/cv_bridge/include"
   "/opt/ros/indigo/include"
   "/usr/include/opencv"
   "/usr/include/eigen3"

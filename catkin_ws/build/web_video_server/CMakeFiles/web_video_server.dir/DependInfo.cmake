@@ -23,12 +23,16 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
+  "/root/catkin_ws/build/cv_bridge/src/CMakeFiles/cv_bridge.dir/DependInfo.cmake"
+  "/root/catkin_ws/build/async_web_server_cpp/CMakeFiles/async_web_server_cpp.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/opencv"
   "/root/catkin_ws/src/web_video_server/include"
+  "/root/catkin_ws/src/cv_bridge/include"
+  "/root/catkin_ws/src/async_web_server_cpp/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

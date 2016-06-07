@@ -4,7 +4,6 @@
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/camera_info_manager/camera_info_manager.h
-line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -78,6 +77,7 @@ line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/std_msgs/Float32.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /root/catkin_ws/src/line_detection/include/momenTUM_const.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /root/catkin_ws/src/line_detection/src/Circle.h
 line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o: /root/catkin_ws/src/line_detection/src/ContourModel.h

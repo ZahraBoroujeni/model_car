@@ -81,7 +81,7 @@ realsense_camera_nodelet_EXTERNAL_OBJECTS =
 
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: camera/CMakeFiles/realsense_camera_nodelet.dir/build.make
-/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8
@@ -170,6 +170,23 @@ realsense_camera_nodelet_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/local/lib/librealsense.so
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_stitching.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_ocl.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_gpu.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_photo.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_legacy.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_contrib.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_objdetect.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_ml.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_features2d.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_flann.so.2.4.8
+/root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: /usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8
 /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so: camera/CMakeFiles/realsense_camera_nodelet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library /root/catkin_ws/devel/lib/librealsense_camera_nodelet.so"
 	cd /root/catkin_ws/build/camera && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/realsense_camera_nodelet.dir/link.txt --verbose=$(VERBOSE)

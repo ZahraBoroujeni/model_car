@@ -24,6 +24,7 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "/usr/include/opencv"
   "/usr/include/vtk-5.8"
   "/root/catkin_ws/src/ip_mapping/include"
+  "/root/catkin_ws/src/cv_bridge/include"
   "/opt/ros/indigo/include"
   "/usr/include/eigen3"
   "/usr/include/pcl-1.7"

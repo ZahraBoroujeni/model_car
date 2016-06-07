@@ -81,7 +81,7 @@ line_detection_node_EXTERNAL_OBJECTS =
 
 /root/catkin_ws/devel/lib/line_detection/line_detection_node: line_detection/CMakeFiles/line_detection_node.dir/src/laneDetection.cpp.o
 /root/catkin_ws/devel/lib/line_detection/line_detection_node: line_detection/CMakeFiles/line_detection_node.dir/build.make
-/root/catkin_ws/devel/lib/line_detection/line_detection_node: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/line_detection/line_detection_node: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/line_detection/line_detection_node: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/line_detection/line_detection_node: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/line_detection/line_detection_node: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8

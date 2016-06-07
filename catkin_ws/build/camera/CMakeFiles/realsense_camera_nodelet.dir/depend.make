@@ -9,7 +9,6 @@ camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/class_loader/class_loader_exceptions.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/class_loader/class_loader_register_macro.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/class_loader/meta_object.h
-camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/BoolParameter.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/Config.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /opt/ros/indigo/include/dynamic_reconfigure/ConfigDescription.h
@@ -153,4 +152,5 @@ camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /root/catkin_ws/devel/include/realsense_camera/camera_paramsConfig.h
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /root/catkin_ws/src/camera/src/realsense_camera_nodelet.cpp
 camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /root/catkin_ws/src/camera/src/realsense_camera_nodelet.h
+camera/CMakeFiles/realsense_camera_nodelet.dir/src/realsense_camera_nodelet.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 

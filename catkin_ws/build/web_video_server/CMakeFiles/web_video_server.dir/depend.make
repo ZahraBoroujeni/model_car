@@ -3,13 +3,6 @@
 
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -79,18 +72,18 @@ web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/image_streamer.cpp.o: /root/catkin_ws/src/web_video_server/src/image_streamer.cpp
 
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_reply.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -158,6 +151,13 @@ web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_reply.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/jpeg_streamers.h
 web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/multipart_stream.h
@@ -165,13 +165,6 @@ web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o: /root
 
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_reply.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -239,18 +232,19 @@ web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_reply.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/libav_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/libav_streamer.cpp.o: /root/catkin_ws/src/web_video_server/src/libav_streamer.cpp
 
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_reply.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/ros/assert.h
@@ -304,17 +298,17 @@ web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /op
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_reply.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/multipart_stream.h
 web_video_server/CMakeFiles/web_video_server.dir/src/multipart_stream.cpp.o: /root/catkin_ws/src/web_video_server/src/multipart_stream.cpp
 
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -383,6 +377,12 @@ web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/multipart_stream.h
 web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/ros_compressed_streamer.h
@@ -390,12 +390,6 @@ web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp
 
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -463,6 +457,12 @@ web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ro
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/Image.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/libav_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/vp8_streamer.h
@@ -470,14 +470,6 @@ web_video_server/CMakeFiles/web_video_server.dir/src/vp8_streamer.cpp.o: /root/c
 
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_connection.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_header.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_reply.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_handler.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_request_parser.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/async_web_server_cpp/http_server.hpp
-web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/image_transport/camera_publisher.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/image_transport/camera_subscriber.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/image_transport/exception.h
@@ -547,6 +539,14 @@ web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /op
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/sensor_msgs/RegionOfInterest.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/sensor_msgs/image_encodings.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /opt/ros/indigo/include/std_msgs/Header.h
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_connection.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_header.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_reply.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_handler.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_request_parser.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/async_web_server_cpp/include/async_web_server_cpp/http_server.hpp
+web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/image_streamer.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/jpeg_streamers.h
 web_video_server/CMakeFiles/web_video_server.dir/src/web_video_server.cpp.o: /root/catkin_ws/src/web_video_server/include/web_video_server/libav_streamer.h

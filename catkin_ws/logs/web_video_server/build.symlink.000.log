@@ -1,4 +1,0 @@
-Symlinking /root/catkin_ws/odroid-devel/share/web_video_server/cmake/web_video_serverConfig.cmake
-Symlinking /root/catkin_ws/odroid-devel/share/web_video_server/cmake/web_video_serverConfig-version.cmake
-Symlinking /root/catkin_ws/odroid-devel/lib/web_video_server/web_video_server
-Symlinking /root/catkin_ws/odroid-devel/lib/pkgconfig/web_video_server.pc

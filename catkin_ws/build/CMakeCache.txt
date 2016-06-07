@@ -53,6 +53,18 @@ Boost_MPI_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_mpi.so
 //Boost mpi library (release)
 Boost_MPI_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_mpi.so
 
+//Boost python library (debug)
+Boost_PYTHON_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_python.so
+
+//Boost python library (release)
+Boost_PYTHON_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_python.so
+
+//Boost regex library (debug)
+Boost_REGEX_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_regex.so
+
+//Boost regex library (release)
+Boost_REGEX_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_regex.so
+
 //Boost serialization library (debug)
 Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_serialization.so
 
@@ -305,6 +317,15 @@ OPENNI_INCLUDE_DIRS:PATH=/usr/include/ni
 //Path to a library.
 OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
 
+//Path to a library.
+OPENSSL_CRYPTO_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libcrypto.so
+
+//Path to a file.
+OPENSSL_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OPENSSL_SSL_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libssl.so
+
 //Path where debug 3rdpaty OpenCV dependencies are located
 OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
 
@@ -496,6 +517,21 @@ PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
+//Path to a file.
+PYTHON_INCLUDE_DIR:PATH=/usr/include/python2.7
+
+//Path to a file.
+PYTHON_INCLUDE_DIR2:PATH=/usr/include/arm-linux-gnueabihf/python2.7
+
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/libpython2.7.so
+
+//Path to a library.
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Numpy include directory
+PYTHON_NUMPY_INCLUDE_DIR:PATH=/usr/lib/python2.7/dist-packages/numpy/core/include
+
 //Specify specific Python version to use ('major.minor' or 'major')
 PYTHON_VERSION:STRING=
 
@@ -532,14 +568,29 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//Path to a file.
+_file_name:FILEPATH=/root/catkin_ws/src/async_web_server_cpp/test/tests.test
+
+//Path to a file.
+_path_name:FILEPATH=/root/catkin_ws/src/cv_bridge/test/python_bindings.py
+
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
 
 //The directory containing a CMake configuration file for actionlib_msgs.
 actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
 
+//Value Computed by CMake
+async_web_server_cpp_BINARY_DIR:STATIC=/root/catkin_ws/build/async_web_server_cpp
+
 //The directory containing a CMake configuration file for async_web_server_cpp.
-async_web_server_cpp_DIR:PATH=/opt/ros/indigo/share/async_web_server_cpp/cmake
+async_web_server_cpp_DIR:PATH=/root/catkin_ws/devel/share/async_web_server_cpp/cmake
+
+//Dependencies for the target
+async_web_server_cpp_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libssl.so;general;/usr/lib/arm-linux-gnueabihf/libcrypto.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;
+
+//Value Computed by CMake
+async_web_server_cpp_SOURCE_DIR:STATIC=/root/catkin_ws/src/async_web_server_cpp
 
 //Value Computed by CMake
 auto_stop_BINARY_DIR:STATIC=/root/catkin_ws/build/auto_stop
@@ -580,8 +631,20 @@ control_SOURCE_DIR:STATIC=/root/catkin_ws/src/control
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
+//Value Computed by CMake
+cv_bridge_BINARY_DIR:STATIC=/root/catkin_ws/build/cv_bridge
+
 //The directory containing a CMake configuration file for cv_bridge.
-cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
+cv_bridge_DIR:PATH=/root/catkin_ws/devel/share/cv_bridge/cmake
+
+//Dependencies for the target
+cv_bridge_LIB_DEPENDS:STATIC=general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;
+
+//Value Computed by CMake
+cv_bridge_SOURCE_DIR:STATIC=/root/catkin_ws/src/cv_bridge
+
+//Dependencies for the target
+cv_bridge_boost_LIB_DEPENDS:STATIC=general;/usr/lib/arm-linux-gnueabihf/libboost_python.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/lib/arm-linux-gnueabihf/libpython2.7.so;general;cv_bridge;
 
 //Value Computed by CMake
 detect_roof_rectangles_BINARY_DIR:STATIC=/root/catkin_ws/build/detect_roof_rectangles
@@ -669,7 +732,7 @@ kalman_2d_LIB_DEPENDS:STATIC=
 kalman_3d_LIB_DEPENDS:STATIC=
 
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libasync_web_server_cpp.so
+lib:FILEPATH=/usr/lib/arm-linux-gnueabihf/libdl.so
 
 //Value Computed by CMake
 light_BINARY_DIR:STATIC=/root/catkin_ws/build/light
@@ -750,7 +813,7 @@ realsense_camera_BINARY_DIR:STATIC=/root/catkin_ws/build/camera
 realsense_camera_SOURCE_DIR:STATIC=/root/catkin_ws/src/camera
 
 //Dependencies for the target
-realsense_camera_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libcv_bridge.so;general;/usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_stitching.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_photo.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_ocl.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_objdetect.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_ml.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_legacy.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_gpu.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_flann.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_features2d.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_contrib.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libcamera_info_manager.so;general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;general;/usr/lib/arm-linux-gnueabihf/libboost_iostreams.so;general;/usr/lib/arm-linux-gnueabihf/libboost_mpi.so;general;/usr/lib/arm-linux-gnueabihf/libboost_serialization.so;optimized;/usr/lib/arm-linux-gnueabihf/libqhull.so;debug;/usr/lib/arm-linux-gnueabihf/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;debug;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/arm-linux-gnueabihf/libuuid.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/arm-linux-gnueabihf/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/local/lib/librealsense.so;
+realsense_camera_nodelet_LIB_DEPENDS:STATIC=general;cv_bridge;general;/usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_stitching.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_photo.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_ocl.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_objdetect.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_ml.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_legacy.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_gpu.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_flann.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_features2d.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_contrib.so.2.4.8;general;/usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libcamera_info_manager.so;general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;general;/usr/lib/arm-linux-gnueabihf/libboost_iostreams.so;general;/usr/lib/arm-linux-gnueabihf/libboost_mpi.so;general;/usr/lib/arm-linux-gnueabihf/libboost_serialization.so;optimized;/usr/lib/arm-linux-gnueabihf/libqhull.so;debug;/usr/lib/arm-linux-gnueabihf/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;debug;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/arm-linux-gnueabihf/libuuid.so;general;/usr/lib/arm-linux-gnueabihf/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/arm-linux-gnueabihf/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/arm-linux-gnueabihf/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/arm-linux-gnueabihf/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/arm-linux-gnueabihf/libboost_signals.so;general;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/arm-linux-gnueabihf/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/arm-linux-gnueabihf/libboost_system.so;general;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;general;/usr/lib/arm-linux-gnueabihf/libpthread.so;general;/usr/lib/arm-linux-gnueabihf/libconsole_bridge.so;general;/usr/local/lib/librealsense.so;
 
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/indigo/share/rosbag/cmake
@@ -896,6 +959,14 @@ Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
 Boost_MPI_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_MPI_LIBRARY_RELEASE
 Boost_MPI_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PYTHON_LIBRARY_DEBUG
+Boost_PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_PYTHON_LIBRARY_RELEASE
+Boost_PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_DEBUG
+Boost_REGEX_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_REGEX_LIBRARY_RELEASE
+Boost_REGEX_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
 Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
@@ -1005,7 +1076,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=22
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=28
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1048,6 +1119,8 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Flann
 FIND_PACKAGE_MESSAGE_DETAILS_Flann:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a][/usr/include][v()]
+//Details about finding OpenSSL
+FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libssl.so;/usr/lib/arm-linux-gnueabihf/libcrypto.so][/usr/include][v1.0.1i-dev()]
 //Details about finding PCL
 FIND_PACKAGE_MESSAGE_DETAILS_PCL:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libboost_system.so;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;/usr/lib/arm-linux-gnueabihf/libboost_iostreams.so;/usr/lib/arm-linux-gnueabihf/libboost_mpi.so;/usr/lib/arm-linux-gnueabihf/libboost_serialization.so;/usr/lib/arm-linux-gnueabihf/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;debug;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;/usr/lib/libOpenNI.so;vtkCommon;vtkRendering;vtkHybrid;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/arm-linux-gnueabihf/libqhull.so;debug;/usr/lib/arm-linux-gnueabihf/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;/usr/lib/arm-linux-gnueabihf/libboost_system.so;/usr/lib/arm-linux-gnueabihf/libboost_filesystem.so;/usr/lib/arm-linux-gnueabihf/libboost_thread.so;/usr/lib/arm-linux-gnueabihf/libboost_date_time.so;/usr/lib/arm-linux-gnueabihf/libboost_iostreams.so;/usr/lib/arm-linux-gnueabihf/libboost_mpi.so;/usr/lib/arm-linux-gnueabihf/libboost_serialization.so;/usr/lib/arm-linux-gnueabihf/libpthread.so;optimized;/usr/lib/arm-linux-gnueabihf/libqhull.so;debug;/usr/lib/arm-linux-gnueabihf/libqhull.so;/usr/lib/libOpenNI.so;optimized;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;debug;/usr/lib/arm-linux-gnueabihf/libflann_cpp_s.a;vtkCommon;vtkRendering;vtkHybrid;vtkCharts][/usr/include/pcl-1.7;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/vtk-5.8][v()]
 //Details about finding PCL_APPS
@@ -1092,6 +1165,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/lib/libpcl_visuali
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
+//Details about finding PythonLibs
+FIND_PACKAGE_MESSAGE_DETAILS_PythonLibs:INTERNAL=[/usr/lib/arm-linux-gnueabihf/libpython2.7.so][/usr/include/python2.7;/usr/include/arm-linux-gnueabihf/python2.7][v2.7.6(2.7)]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding eigen
@@ -1117,6 +1192,12 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_CRYPTO_LIBRARY
+OPENSSL_CRYPTO_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_INCLUDE_DIR
+OPENSSL_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OPENSSL_SSL_LIBRARY
+OPENSSL_SSL_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
 OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
@@ -1295,21 +1376,64 @@ PC_OPENNI_openni-dev_VERSION:INTERNAL=
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR
+PYTHON_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_INCLUDE_DIR2
+PYTHON_INCLUDE_DIR2-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
+PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;mpi;serialization;system;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;mpi;python;regex;serialization;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR value.
 _Boost_LIBRARY_DIR_LAST:INTERNAL=/usr/lib/arm-linux-gnueabihf
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+_OPENSSL_CFLAGS:INTERNAL=
+_OPENSSL_CFLAGS_I:INTERNAL=
+_OPENSSL_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_FOUND:INTERNAL=1
+_OPENSSL_INCLUDEDIR:INTERNAL=/usr/include
+_OPENSSL_INCLUDE_DIRS:INTERNAL=
+_OPENSSL_LDFLAGS:INTERNAL=-lssl;-lcrypto
+_OPENSSL_LDFLAGS_OTHER:INTERNAL=
+_OPENSSL_LIBDIR:INTERNAL=/usr/lib/arm-linux-gnueabihf
+_OPENSSL_LIBRARIES:INTERNAL=ssl;crypto
+_OPENSSL_LIBRARY_DIRS:INTERNAL=
+_OPENSSL_LIBS:INTERNAL=
+_OPENSSL_LIBS_L:INTERNAL=
+_OPENSSL_LIBS_OTHER:INTERNAL=
+_OPENSSL_LIBS_PATHS:INTERNAL=
+_OPENSSL_PREFIX:INTERNAL=/usr
+_OPENSSL_STATIC_CFLAGS:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_I:INTERNAL=
+_OPENSSL_STATIC_CFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_INCLUDE_DIRS:INTERNAL=
+_OPENSSL_STATIC_LDFLAGS:INTERNAL=-lssl;-lcrypto;-ldl
+_OPENSSL_STATIC_LDFLAGS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBDIR:INTERNAL=
+_OPENSSL_STATIC_LIBRARIES:INTERNAL=ssl;crypto;dl
+_OPENSSL_STATIC_LIBRARY_DIRS:INTERNAL=
+_OPENSSL_STATIC_LIBS:INTERNAL=
+_OPENSSL_STATIC_LIBS_L:INTERNAL=
+_OPENSSL_STATIC_LIBS_OTHER:INTERNAL=
+_OPENSSL_STATIC_LIBS_PATHS:INTERNAL=
+_OPENSSL_VERSION:INTERNAL=1.0.1i-dev
+_OPENSSL_openssl_INCLUDEDIR:INTERNAL=
+_OPENSSL_openssl_LIBDIR:INTERNAL=
+_OPENSSL_openssl_PREFIX:INTERNAL=
+_OPENSSL_openssl_VERSION:INTERNAL=
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
 __pkg_config_checked_PC_FLANN:INTERNAL=1
 __pkg_config_checked_PC_OPENNI:INTERNAL=1
+__pkg_config_checked__OPENSSL:INTERNAL=1
 __pkg_config_checked_avcodec:INTERNAL=1
 __pkg_config_checked_avformat:INTERNAL=1
 __pkg_config_checked_avutil:INTERNAL=1

@@ -231,7 +231,7 @@ web_video_server_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: web_video_server/CMakeFiles/web_video_server.dir/src/ros_compressed_streamer.cpp.o
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: web_video_server/CMakeFiles/web_video_server.dir/src/jpeg_streamers.cpp.o
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: web_video_server/CMakeFiles/web_video_server.dir/build.make
-/root/catkin_ws/devel/lib/web_video_server/web_video_server: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8
@@ -268,7 +268,7 @@ web_video_server_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /opt/ros/indigo/lib/libcpp_common.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
-/root/catkin_ws/devel/lib/web_video_server/web_video_server: /opt/ros/indigo/lib/libasync_web_server_cpp.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /root/catkin_ws/devel/lib/libasync_web_server_cpp.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_system.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
@@ -293,9 +293,6 @@ web_video_server_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_contrib.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.2.4.8
-/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_system.so
-/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
-/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_photo.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_legacy.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
@@ -307,6 +304,13 @@ web_video_server_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_flann.so.2.4.8
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libssl.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libcrypto.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_system.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
+/root/catkin_ws/devel/lib/web_video_server/web_video_server: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /root/catkin_ws/devel/lib/web_video_server/web_video_server: web_video_server/CMakeFiles/web_video_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /root/catkin_ws/devel/lib/web_video_server/web_video_server"
 	cd /root/catkin_ws/build/web_video_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/web_video_server.dir/link.txt --verbose=$(VERBOSE)

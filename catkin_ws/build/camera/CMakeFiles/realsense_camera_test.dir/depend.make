@@ -4,7 +4,6 @@
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/camera_info_manager/camera_info_manager.h
-camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point32.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /opt/ros/indigo/include/geometry_msgs/PointStamped.h
@@ -143,6 +142,7 @@ camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /root/catkin_ws/devel/include/realsense_camera/cameraConfigurationResponse.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /root/catkin_ws/src/camera/test/realsense_camera_test_node.cpp
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /root/catkin_ws/src/camera/test/realsense_camera_test_node.h
+camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /usr/include/eigen3/Eigen/Cholesky
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /usr/include/eigen3/Eigen/Core
 camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o: /usr/include/eigen3/Eigen/Eigen2Support

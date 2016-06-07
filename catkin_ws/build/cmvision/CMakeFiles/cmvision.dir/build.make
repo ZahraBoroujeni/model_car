@@ -156,7 +156,7 @@ cmvision_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/cmvision/cmvision: cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o
 /root/catkin_ws/devel/lib/cmvision/cmvision: cmvision/CMakeFiles/cmvision.dir/src/main.cpp.o
 /root/catkin_ws/devel/lib/cmvision/cmvision: cmvision/CMakeFiles/cmvision.dir/build.make
-/root/catkin_ws/devel/lib/cmvision/cmvision: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/cmvision/cmvision: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/cmvision/cmvision: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/cmvision/cmvision: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/cmvision/cmvision: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8

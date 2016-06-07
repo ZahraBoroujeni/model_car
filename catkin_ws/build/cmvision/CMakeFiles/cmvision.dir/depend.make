@@ -9,7 +9,6 @@ cmvision/CMakeFiles/cmvision.dir/src/cmvision.cc.o: /root/catkin_ws/src/cmvision
 
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
-cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/cv_bridge/cv_bridge.h
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/ros/advertise_options.h
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/ros/advertise_service_options.h
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /opt/ros/indigo/include/ros/assert.h
@@ -75,6 +74,7 @@ cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /root/cat
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /root/catkin_ws/src/cmvision/src/cmvision_color_blob_finder.cpp
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /root/catkin_ws/src/cmvision/src/cmvision_color_blob_finder.h
 cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /root/catkin_ws/src/cmvision/src/conversions.h
+cmvision/CMakeFiles/cmvision.dir/src/cmvision_color_blob_finder.cpp.o: /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
 
 cmvision/CMakeFiles/cmvision.dir/src/main.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 cmvision/CMakeFiles/cmvision.dir/src/main.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h

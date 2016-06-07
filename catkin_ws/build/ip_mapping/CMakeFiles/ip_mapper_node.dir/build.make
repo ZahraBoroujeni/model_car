@@ -81,7 +81,7 @@ ip_mapper_node_EXTERNAL_OBJECTS =
 
 /root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: ip_mapping/CMakeFiles/ip_mapper_node.dir/src/ip_mapper_node.cpp.o
 /root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: ip_mapping/CMakeFiles/ip_mapper_node.dir/build.make
-/root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/ip_mapping/ip_mapper_node: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8

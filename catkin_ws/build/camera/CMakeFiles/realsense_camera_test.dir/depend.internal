@@ -5,7 +5,6 @@ camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.
  /opt/ros/indigo/include/XmlRpcDecl.h
  /opt/ros/indigo/include/XmlRpcValue.h
  /opt/ros/indigo/include/camera_info_manager/camera_info_manager.h
- /opt/ros/indigo/include/cv_bridge/cv_bridge.h
  /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/geometry_msgs/Point32.h
  /opt/ros/indigo/include/geometry_msgs/PointStamped.h
@@ -144,6 +143,7 @@ camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.
  /root/catkin_ws/devel/include/realsense_camera/cameraConfigurationResponse.h
  /root/catkin_ws/src/camera/test/realsense_camera_test_node.cpp
  /root/catkin_ws/src/camera/test/realsense_camera_test_node.h
+ /root/catkin_ws/src/cv_bridge/include/cv_bridge/cv_bridge.h
  /usr/include/eigen3/Eigen/Cholesky
  /usr/include/eigen3/Eigen/Core
  /usr/include/eigen3/Eigen/Eigen2Support

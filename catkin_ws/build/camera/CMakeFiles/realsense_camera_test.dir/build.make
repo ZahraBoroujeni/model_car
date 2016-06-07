@@ -81,7 +81,7 @@ realsense_camera_test_EXTERNAL_OBJECTS =
 
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: camera/CMakeFiles/realsense_camera_test.dir/test/realsense_camera_test_node.cpp.o
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: camera/CMakeFiles/realsense_camera_test.dir/build.make
-/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /opt/ros/indigo/lib/libcv_bridge.so
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /root/catkin_ws/devel/lib/libcv_bridge.so
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8
@@ -170,6 +170,23 @@ realsense_camera_test_EXTERNAL_OBJECTS =
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: gtest/libgtest.so
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_videostab.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_superres.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_stitching.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_ocl.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_gpu.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_photo.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_legacy.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_contrib.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_video.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_objdetect.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_ml.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_calib3d.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_features2d.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_highgui.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_imgproc.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_flann.so.2.4.8
+/root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: /usr/lib/arm-linux-gnueabihf/libopencv_core.so.2.4.8
 /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test: camera/CMakeFiles/realsense_camera_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /root/catkin_ws/devel/lib/realsense_camera/realsense_camera_test"
 	cd /root/catkin_ws/build/camera && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/realsense_camera_test.dir/link.txt --verbose=$(VERBOSE)
