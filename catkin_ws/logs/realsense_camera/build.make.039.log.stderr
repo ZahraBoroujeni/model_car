@@ -1,0 +1,5 @@
+/root/catkin_ws/odroid-build/realsense_camera/setup_custom_pythonpath.sh: 4: exec: /root/catkin_ws/src/camera/cfg/camera_params.cfg: Permission denied
+make[2]: *** [/root/catkin_ws/odroid-devel/.private/realsense_camera/include/realsense_camera/camera_paramsConfig.h] Error 126
+make[1]: *** [CMakeFiles/realsense_camera_gencfg.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

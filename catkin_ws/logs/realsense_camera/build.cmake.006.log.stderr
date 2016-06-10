@@ -1,0 +1,11 @@
+[31m[1mCMake Error[0m at /root/catkin_ws/odroid-devel/share/cv_bridge/cmake/cv_bridgeConfig.cmake:106 (message):
+  Project 'cv_bridge' specifies '/root/catkin_ws/src/cv_bridge/include' as an
+  include dir, which is not found.  It does neither exist as an absolute
+  directory nor in
+  '/root/catkin_ws/src/cv_bridge//root/catkin_ws/src/cv_bridge/include'.  Ask
+  the maintainer 'Vincent Rabaud <vincent.rabaud@@gmail.com>' to fix it.
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/indigo/share/catkin/cmake/catkinConfig.cmake:76 (find_package)
+  CMakeLists.txt:16 (find_package)
+
+

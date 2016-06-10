@@ -1,0 +1,1 @@
+set(ORDERED_PATHS "/root/catkin_ws/odroid-devel/.private/serial/lib;/opt/ros/indigo/lib")

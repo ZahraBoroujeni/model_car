@@ -1,0 +1,4 @@
+[31m[1mLinking CXX shared library /root/catkin_ws/odroid-devel/.private/heading/lib/libheading.so
+[0m[ 50%] Built target heading
+[31m[1mLinking CXX executable /root/catkin_ws/odroid-devel/.private/heading/lib/heading/heading_node
+[0m[100%] Built target heading_node

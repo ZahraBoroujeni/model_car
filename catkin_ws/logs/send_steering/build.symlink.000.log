@@ -1,0 +1,5 @@
+Symlinking /root/catkin_ws/odroid-devel/share/send_steering/cmake/send_steeringConfig-version.cmake
+Symlinking /root/catkin_ws/odroid-devel/share/send_steering/cmake/send_steeringConfig.cmake
+Symlinking /root/catkin_ws/odroid-devel/lib/libsend_steering.so
+Symlinking /root/catkin_ws/odroid-devel/lib/send_steering/send_steering_node
+Symlinking /root/catkin_ws/odroid-devel/lib/pkgconfig/send_steering.pc
