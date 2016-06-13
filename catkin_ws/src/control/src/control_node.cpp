@@ -34,8 +34,8 @@ class auto_control
       priv_nh_.param<float>("speed_Kp", speed_Kp_, 0.05);
       priv_nh_.param<float>("maximum_rpm", maximum_rpm_, 1000);
       priv_nh_.param<float>("minimum_rpm", minimum_rpm_, 20);
-      priv_nh_.param<float>("maximum_steering", maximum_steering_, 50);
-      priv_nh_.param<float>("minimum_steering", minimum_steering_, -50);
+      priv_nh_.param<float>("maximum_steering", maximum_steering_, 90);
+      priv_nh_.param<float>("minimum_steering", minimum_steering_, -90);
       sub_curvature_ = nh_.subscribe( "lane_model/parabola", 1,  &auto_control::curvatureCallback,this);
       pub_steering_= nh.advertise<std_msgs::Int16>(nh.resolveName("/manual_contol/steering"), 1);
       pub_speed_= nh.advertise<std_msgs::Int16>(nh.resolveName("/manual_contol/speed"), 1);
@@ -64,12 +64,12 @@ void auto_control::curvatureCallback(const std_msgs::Float32 curvature)
   if ((DesiredSteering<1)&&(-1<DesiredSteering))
     DesiredSpeed=maximum_rpm_;
   else
-      DesiredSpeed=minimum_steering_+speed_Kp_*(maximum_steering_/abs(DesiredSteering));
+      DesiredSpeed=minimum_rpm_+speed_Kp_*(maximum_rpm_/abs(DesiredSteering));
 
   if  (DesiredSpeed>maximum_rpm_)
       DesiredSpeed=maximum_rpm_; 
 
-  desired_steering.data=DesiredSteering;
+  desired_steering.data=DesiredSteering+90;
   desired_speed.data=DesiredSpeed;
   pub_steering_.publish(desired_steering);
   pub_speed_.publish(desired_speed);
